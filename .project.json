@@ -1,0 +1,24 @@
+{
+  "generation": [
+    {
+      "templateId": "fioriexttemplate.starterApplication",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Tue, 20 Jan 2015 17:48:15 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV",
+    "loadJSONFiles": false
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hcpdeploy": {
+    "account": "p1940932198trial",
+    "name": "ui5purebusinesspartnerapp"
+  }
+}

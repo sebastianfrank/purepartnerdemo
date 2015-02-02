@@ -1,0 +1,90 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:shellfooter="sap.ushell.ui.footerbar" controllerName="ui5_pure_businesspartner_app.view.Master">
+	
+	<Page id="page" title="{i18n>MASTER_TITLE}">
+		<subHeader id="subHeader">
+			<Toolbar id="bar1">
+				<!--<contentMiddle id="contentMiddle">-->
+					<SearchField id="searchField" showRefreshButton="{device>/isNoTouch}"
+						placeholder="{i18n>MASTER_SEARCH_PLACEHOLDER}" search="handleSearch"
+						tooltip="{i18n>MASTER_SEARCH_TOOLTIP}" width="100%">
+					</SearchField>
+				<!--</contentMiddle>-->
+				<!--<contentRight id="contentMiddle">-->
+				    <!--<Button-->
+        <!--                icon="sap-icon://delete"-->
+        <!--                press="handleDeleteBP" />-->
+				    <Button
+                        icon="sap-icon://add-contact"
+                        press="handleCreateBP" />
+                <!--</contentRight>-->
+			</Toolbar>
+		</subHeader>
+		
+		<content id="content">
+		
+			<List id="list" items="{/BusinessPartnerSet}" mode="{device>/listMode}"
+		
+				select="handleSelect" growing="true" growingScrollToLoad="true"
+				delete="handleDelete">
+				 <customData id="customData1">
+                            <core:CustomData id="coreCustomData1" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+                 </customData>
+                 
+    <!--<headerToolbar>-->
+    <!--  <Toolbar>-->
+        <!--<Label text="Business Partner" />-->
+    <!--    <ToolbarSpacer />-->
+    <!--    <Button-->
+    <!--      icon="sap-icon://add-contact"-->
+    <!--      press="handleAddBP" />-->
+    <!--  </Toolbar>-->
+    <!--</headerToolbar-->
+                 
+				 <items id="listItems">
+					<ObjectListItem id="mainListItem" type="{device>/listItemType}"
+					 title="{Name}"
+					 icon="{PartnerPicUrl}"
+					 number="{Bpext}"
+					 numberUnit="{Partner}"
+					 press="handleSelect">
+						<customData id="customData2">
+                             <core:CustomData id="coreCustomData2" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+                        </customData>
+                        <firstStatus>
+							<ObjectStatus id="kundenIndexStatusObject" text="KI" />
+						</firstStatus>
+						<attributes id="attributes">
+							
+								<ObjectAttribute id="ATTR1" text="{City}">
+								<customData id="customData3">
+									<core:CustomData id="coreCustomData3" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+								</customData>
+								</ObjectAttribute>
+							
+							
+								<ObjectAttribute id="ATTR2" text="{CustSeg}">
+									<customData id="customData4">
+										<core:CustomData id="coreCustomData4" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+									</customData>
+								</ObjectAttribute>
+							
+						</attributes>
+					</ObjectListItem>
+					
+					<!--<StandardListItem />-->
+					
+				</items>
+			</List>
+		</content>
+		
+		<footer id="footer">
+			<Bar id="bar2">
+				<contentLeft id="contentLeft">
+					<shellfooter:SettingsButton id="settingsButton"></shellfooter:SettingsButton>
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+	
+</mvc:View>

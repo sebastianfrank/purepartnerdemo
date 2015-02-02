@@ -1,0 +1,198 @@
+<mvc:<script src="/resources/sap-ui-core.js"	id="sap-ui-bootstrap" data-sap-ui-libs="sap.ui.commons"></script><script>var bRunWithMock = true; var sRunWithMock = jQuery.sap.getUriParameters().get('run-with-mock');	if (sRunWithMock === 'false') { bRunWithMock = false; } if (bRunWithMock) { jQuery.sap.require('sap.ui.core.util.MockServer');var uri = '/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV';var oMock = new sap.ui.core.util.MockServer({rootUri : uri +'/'}); oMock.simulate('../model/metadata.xml'); oMock.start(); }</script>iew 
+	controllerName="ui5_pure_businesspartner_app.view.Detail"
+	xmlns="sap.m" 
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page 
+		id="detailsPage"
+		title="{i18n>DETAIL_TITLE}"
+		class="sapUiFioriObjectPage"  
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress">
+	
+		<ObjectHeader id="header"
+			 title="{Name}"
+			 number="{Bpext}"
+			 numberUnit="{Partner}">
+			
+			<customData id="customData1">
+                <core:CustomData id="coreCustomData1" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+            </customData>
+			
+			<attributes id="detailsAttributes">
+				<ObjectAttribute id="ATTR" text="{i18n>DETAIL_TEXT}" />
+			</attributes>
+		</ObjectHeader>
+		
+		<IconTabBar 
+			id="iconTabBar"
+			expanded="{device>/isNoPhone}" >
+			<customData id="customData2">
+                <core:CustomData id="coreCustomData2" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+            </customData>
+			<items id="detailsItems">
+				<IconTabFilter id="iconTabFilter1"
+					icon="sap-icon://hint">
+					<form:SimpleForm
+						id="adr_form1"
+						layout="ResponsiveGridLayout"
+						minWidth="1024"
+						maxContainerCols="2"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        columnsL="2"
+                        columnsM="2">
+                        <!--class="editableForm"-->
+                        <!--editable="true"-->
+						<core:Title id="title1" text="Adresse" />
+						
+						<Text id="adr_text0" text="{Name}" >
+							<customData id="customData7">
+								<core:CustomData id="adr_coreCustomData3" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+							</customData>
+						</Text>
+						
+						<Text id="adr_text1" text="{Street} {HouseNo}" >
+							<customData id="customData7">
+								<core:CustomData id="adr_coreCustomData4" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+							</customData>
+						</Text>
+						
+						<Text id="adr_text2" text="{PostlCod1} {City}" >
+							<customData id="customData4">
+								<core:CustomData id="adr_coreCustomData5" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+							</customData>
+						</Text>
+					    
+                        <Text id="adr_text3" text="{Country}" >
+							<customData id="customData7">
+								<core:CustomData id="adr_coreCustomData6" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+							</customData>
+						</Text>
+						
+						<core:ExtensionPoint name="extIconTabFilterForm1"/>
+						
+					</form:SimpleForm>
+				</IconTabFilter>
+						
+				<IconTabFilter id="iconTabFilter2" icon="sap-icon://discussion">
+					
+					<form:SimpleForm
+						id="contact_form2"
+						layout="ResponsiveGridLayout"
+						minWidth="1024"
+						maxContainerCols="2"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        columnsL="1"
+                        columnsM="1"> 
+
+						<core:Title id="title2" text="Kontakt" />
+						
+						<Label id="label3" text="Telefon">
+							<customData id="customData9">
+								<core:CustomData id="coreCustomData9" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+							</customData>
+						</Label>
+						
+						<Text id="text3" text="{Telephone}" >
+							<customData id="customData10">
+								<core:CustomData id="coreCustomData10" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
+							</customData>
+						</Text>
+						
+						<Label id="contact_mobile_label" text="Mobil" />
+						<Text id="contact_mobile_text" text="{Mobile}" />
+						
+						<Label id="contact_email_label" text="Email" />
+						<Text id="contact_email_text" text="{Email}" />
+						
+						<Label id="contact_url_label" text="www" />
+						<Text id="contact_url_text" text="{Url}" />
+						
+						<Label id="contact_language_label" text="Sprache" />
+						<Text id="contact_language_text" text="{Langu}" />
+						
+						<core:ExtensionPoint name="extIconTabFilterForm2"/>
+						
+					</form:SimpleForm>
+				</IconTabFilter>
+				
+				
+				<!-- W5L: Chart -->
+				<IconTabFilter id="iconTabFilterChart" icon="sap-icon://vertical-stacked-chart">
+					 <form:SimpleForm id="formChart" layout="ResponsiveGridLayout" minWidth="1024"> 
+					 <core:Title id="titleChart" text="Chart" /> 
+
+					<!--<viz:Popover id="idPopOver"></viz:Popover>-->
+					<!--<viz:VizFrame id="idVizFrameStackedColumn" uiConfig="{applicationSet:'fiori'}"-->
+					<!--	vizType="stacked_column" width="900px" height="700px">-->
+					<!--</viz:VizFrame>-->
+
+
+					<core:ExtensionPoint name="extIconTabFilterFormChart" />
+
+					 </form:SimpleForm> 
+				</IconTabFilter>
+
+				<!-- W5L: Overview tile -->
+				<IconTabFilter id="iconTabFilterOverview" icon="sap-icon://personnel-view">
+					<form:SimpleForm id="formOverview" layout="ResponsiveGridLayout"
+						minWidth="1024">
+						<core:Title id="titleOverview" text="Companies" />
+
+						<!-- <Button text="Klick me" press="onMyButton1Press" /> -->
+
+						<Button text="Add Item" press="createODataStatement" />
+
+<!--						<VBox id="idOverviewTileVBox">-->
+<!-- 							<Switch change="toggleVisible" state="true" customTextOff="Hidden" /> -->
+
+<!--							<layout:Grid content="{/WorkItems}">-->
+<!--								<layout:content>-->
+<!--									<ui:OverviewTile -->
+<!--									    icon="sap-icon://building"-->
+<!--									    contact="{CreatedBy}"-->
+<!--										title="{Company}"-->
+<!--										address="{Address}"-->
+<!--										rating="{Rating}"-->
+<!--										opportunities="{Opportunities}"-->
+<!--										revenue="{revenuToDate}"-->
+<!--										lastContact="{LastContact}"-->
+<!--										nextContact="{NextContact}"-->
+<!--										press="onTileTap"-->
+<!--										contactActive="{contactActive}"-->
+<!--										contactPress="showContact"-->
+<!--										visible="{visible}">-->
+<!--										<ui:layoutData>-->
+<!--											<layout:GridData span="L6 M6 S12"></layout:GridData>-->
+<!--										</ui:layoutData>-->
+<!--									</ui:OverviewTile>-->
+<!--								</layout:content>-->
+<!--							</layout:Grid>-->
+<!--						</VBox>-->
+
+						<core:ExtensionPoint name="extIconTabFilterFormOverview" />
+
+					</form:SimpleForm>
+				</IconTabFilter>
+				
+			</items>
+		</IconTabBar>
+		
+		<core:ExtensionPoint name="extDetail"/>
+		
+		<footer id="detailsFooter">
+			<Bar id="bar">
+				<contentRight id="detailsContentRight">
+					<Button id="actionButton" icon="sap-icon://action" press="openActionSheet"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZUI5_PURE_BUSINESS_PARTNER_SRV" xml:lang="de" sap:schema-version="0000"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="BusinessPartner" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Partner"/>
+                </Key>
+                <Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
+                <Property Name="Bpext" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Externe Nummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Text" sap:sortable="false"/>
+                <Property Name="City" Type="Edm.String" MaxLength="40" sap:label="Ort" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PostlCod1" Type="Edm.String" MaxLength="10" sap:label="Postleitzahl" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Street" Type="Edm.String" MaxLength="60" sap:label="Straße" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HouseNo" Type="Edm.String" MaxLength="10" sap:label="Hausnummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:label="Land" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Langu" Type="Edm.String" MaxLength="2" sap:label="Sprache (ISO)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Telephone" Type="Edm.String" MaxLength="30" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mobile" Type="Edm.String" MaxLength="30" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="241" sap:label="E-Mail-Adresse" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Url" Type="Edm.String" MaxLength="132" sap:label="URI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CustSeg" Type="Edm.String" MaxLength="20" sap:label="Bezeichnung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CustSat" Type="Edm.String" MaxLength="3" sap:label="Dummy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ContactPersonSet" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="FromRole_zui5_bp_to_cp_association" ToRole="ToRole_zui5_bp_to_cp_association"/>
+            </EntityType>
+            <EntityType Name="ContactPerson" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Partner"/>
+                    <PropertyRef Name="PartnerCp"/>
+                </Key>
+                <Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
+                <Property Name="PartnerCp" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
+                <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Vorname" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lastname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Nachname" sap:sortable="false"/>
+                <Property Name="City" Type="Edm.String" MaxLength="40" sap:label="Ort" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Langu" Type="Edm.String" MaxLength="2" sap:label="Sprache (ISO)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Telephone" Type="Edm.String" MaxLength="30" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mobile" Type="Edm.String" MaxLength="30" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="241" sap:label="E-Mail-Adresse" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Facebook" Type="Edm.String" MaxLength="132" sap:label="URI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ContactDate" Type="Edm.DateTime" Precision="7" sap:label="Datum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Category" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Channel" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="BusinessPartner" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="ToRole_zui5_bp_to_cp_association" ToRole="FromRole_zui5_bp_to_cp_association"/>
+            </EntityType>
+            <Association Name="zui5_bp_to_cp_association" sap:content-version="1">
+                <End Type="ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner" Multiplicity="1" Role="FromRole_zui5_bp_to_cp_association"/>
+                <End Type="ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson" Multiplicity="*" Role="ToRole_zui5_bp_to_cp_association"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_zui5_bp_to_cp_association">
+                        <PropertyRef Name="Partner"/>
+                    </Principal>
+                    <Dependent Role="ToRole_zui5_bp_to_cp_association">
+                        <PropertyRef Name="Partner"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZUI5_PURE_BUSINESS_PARTNER_SRV_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ContactPersonSet" EntityType="ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="BusinessPartnerSet" EntityType="ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="zui5_bp_to_cp_associationSet" Association="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="BusinessPartnerSet" Role="FromRole_zui5_bp_to_cp_association"/>
+                    <End EntitySet="ContactPersonSet" Role="ToRole_zui5_bp_to_cp_association"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://localhost:9090/webidedispatcher/destinations/A4H/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="http://localhost:9090/webidedispatcher/destinations/A4H/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

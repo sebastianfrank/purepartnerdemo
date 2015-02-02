@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Partner Registration Form">
+<Require feature="sap-xhrwrapper"></Require>
+</ModulePrefs>
+    <Content href="index.html" view="authoring, consumption, mobile, preview"></Content>
+</Module>
