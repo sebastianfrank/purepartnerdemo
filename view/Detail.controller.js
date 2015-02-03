@@ -218,7 +218,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 						var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
 						var oPopOver = this.getView().byId("idPopOver");
-						var oModelProducts = new sap.ui.model.json.JSONModel("./resources/products.json");
+				// 		var oModelProducts = new sap.ui.model.json.JSONModel("./resources/products.json");
 				// 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 				// 			dimensions : [ {
 				// 				name : 'ProductId',
