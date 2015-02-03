@@ -159,7 +159,7 @@
  							<!--<Switch change="toggleVisible" state="true" customTextOff="Hidden" /> -->
 
 <!-- oder einfach /ContactPersonSet -->
-							<layout:Grid content="{/ContactPersonSet}"> 
+							<layout:Grid content="{/BusinessPartnerSet('3000')/ContactPersonSet}"> 
 								<layout:content>
 									<ui:OverviewTile 
 									    icon="sap-icon://building"
