@@ -8,7 +8,8 @@
 	xmlns:viz5="sap.viz.ui5"
 	xmlns:vizd="sap.viz.ui5.data"
 	xmlns:layout="sap.ui.layout"
-	xmlns:ui="sap.ca.ui">
+	xmlns:ui="sap.ca.ui"
+	xmlns:commons="sap.suite.ui.commons">
 	<Page 
 		id="detailsPage"
 		title="{i18n>DETAIL_TITLE}"
@@ -90,12 +91,15 @@
 						layout="ResponsiveGridLayout"
 						minWidth="1024"
 						maxContainerCols="2"
-                        labelSpanL="3"
-                        labelSpanM="3"
-                        emptySpanL="4"
-                        emptySpanM="4"
+                        labelSpanL="2"
+                        labelSpanM="6"
+                        labelSpanS="12"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        emptySpanS="0"
                         columnsL="1"
-                        columnsM="1"> 
+                        columnsM="1"
+                        columnsS="1"> 
 
 						<core:Title id="title2" text="Kontakt" />
 						
@@ -131,14 +135,24 @@
 				
 				<!-- W5L: Chart -->
 				<IconTabFilter id="iconTabFilterChart" icon="sap-icon://vertical-stacked-chart">
-					 <form:SimpleForm id="formChart" layout="ResponsiveGridLayout" minWidth="1024"> 
+					 <form:SimpleForm id="formChart" layout="ResponsiveGridLayout" minWidth="1024"
+					    maxContainerCols="1"
+                        labelSpanL="4"
+                        labelSpanM="2"
+                        labelSpanS="12"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsL="1"
+                        columnsM="1"
+                        columnsS="1">
+                        
 					 <core:Title id="titleChart" text="Chart" /> 
 
 					<viz:VizFrame id="idVizFrameStackedColumn" uiConfig="{applicationSet:'fiori'}"
 						vizType="stacked_column" width="900px" height="700px">
 					</viz:VizFrame>
 					<viz:Popover id="idPopOver"></viz:Popover>
-
 
 					<core:ExtensionPoint name="extIconTabFilterFormChart" />
 
@@ -149,39 +163,106 @@
 				<IconTabFilter id="iconTabFilterOverview" icon="sap-icon://personnel-view">
 					<form:SimpleForm id="formOverview" layout="ResponsiveGridLayout"
 						minWidth="1024">
-						<core:Title id="titleOverview" text="Companies" />
+						<core:Title id="titleOverview" text="Kontaktpersonen" />
 
-						<!-- <Button text="Klick me" press="onMyButton1Press" /> -->
+						<Button text="Kontakt hinzufügen" press="onAddContact" />
+						<!--<Button text="Kontakt hinzufügen" press="createODataStatement" />-->
+						
+<commons:FacetOverview 
+    heightType="Auto"
+    width= "500px"
+    press="pressFacetOverview"
+    class="marginTopLeft">
+            <commons:content>
 
-						<Button text="Add Item" press="createODataStatement" />
+            <layout:Grid defaultSpan="L6 M6 S6" class="sapUtiContactsGrid">
+              <HBox class="sapUtiContactsBox">
+                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_01.png" width="48px" height="48px" class="sapUtiContactsImage"/>
+                <VBox>
+                <Text text="Megan Miller" class="sapUtiTextName"/>
+                <Text text="Sales Representative" class="sapUtiTextValue"/>
+                </VBox>
+              </HBox>
+              <HBox class="sapUtiContactsBox">
+                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_02.png" width="48px" height="48px" class="sapUtiContactsImage"/>
+                <VBox>
+                <Text text="Peter McNamara" class="sapUtiTextName"/>
+                <Text text="Sales Executive" class="sapUtiTextValue"/>
+                </VBox>
+              </HBox>
+              <HBox class="sapUtiContactsBox">
+                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_03.png" width="48px" height="48px" class="sapUtiContactsImage"/>
+                <VBox>
+                <Text text="George W.Brunick" class="sapUtiTextName"/>
+                <Text text="Cash Manager" class="sapUtiTextValue"/>
+                </VBox>
+              </HBox>
+              <HBox class="sapUtiContactsBox">
+                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_04.png" width="48px" height="48px" class="sapUtiContactsImage"/>
+                <VBox>
+                <Text text="Lilian R.Owens" class="sapUtiTextName"/>
+                <Text text="Cash Manager" class="sapUtiTextValue"/>
+                </VBox>
+              </HBox>
+            </layout:Grid>
+            </commons:content>
+  </commons:FacetOverview>
 
-						<VBox id="idOverviewTileVBox">
+  <!--<List-->
+  <!--  items="{/BusinessPartnerSet('3000')/ContactPersonSet}"-->
+  <!--  headerText="Kontaktpersonen">-->
+  <!--  <items>-->
+  <!--    <ObjectListItem-->
+  <!--      icon="sap-icon://building"-->
+  <!--      title="{Firstname} {Lastname}"-->
+  <!--      type="Active"-->
+  <!--      press="onTileTap"-->
+  <!--      number="{PartnerCp}">-->
+        <!--<firstStatus>-->
+        <!--  <ObjectStatus-->
+        <!--    text="{Status}"-->
+        <!--    state="{-->
+        <!--      path: 'Status',-->
+        <!--      formatter: 'sap.m.sample.ObjectListItem.Formatter.status'-->
+        <!--    }" />-->
+        <!--</firstStatus>-->
+  <!--      <attributes>-->
+  <!--        <ObjectAttribute text="{City}" />-->
+  <!--        <ObjectAttribute text="{Langu}" />-->
+  <!--        <ObjectAttribute text="{Telephone}" />-->
+  <!--        <ObjectAttribute text="{Mobile}" />-->
+  <!--        <ObjectAttribute text="{Email}" />-->
+  <!--        <ObjectAttribute text="{ContactDate}" />-->
+  <!--      </attributes>-->
+  <!--    </ObjectListItem>-->
+  <!--  </items>-->
+  <!--</List>-->
+
+						<!--<VBox id="idOverviewTileVBox">-->
  							<!--<Switch change="toggleVisible" state="true" customTextOff="Hidden" /> -->
-
-<!-- oder einfach /ContactPersonSet -->
-							<layout:Grid content="{/BusinessPartnerSet('3000')/ContactPersonSet}"> 
-								<layout:content>
-									<ui:OverviewTile 
-									    icon="sap-icon://building"
-									    contact="{Email}"
-										title="{Firstname} {Lastname}"
-										address="{City}"
-										rating=""
-										opportunities=""
-										revenue=""
-										lastContact="{ContactDate}"
-										nextContact=""
-										press="onTileTap"
-										contactActive="true"
-										contactPress="showContact"
-										visible="true">
-										<ui:layoutData>
-											<layout:GridData span="L6 M6 S12"></layout:GridData>
-										</ui:layoutData>
-									</ui:OverviewTile>
-								</layout:content>
-							</layout:Grid>
-						</VBox>
+                            <!-- oder einfach /ContactPersonSet -->
+						<!--	<layout:Grid content="{/BusinessPartnerSet('3000')/ContactPersonSet}"> -->
+						<!--		<layout:content>-->
+						<!--			<ui:OverviewTile -->
+						<!--			    icon="sap-icon://building"-->
+						<!--			    contact="{Lastname}"-->
+						<!--				title="{Firstname} {Lastname}"-->
+						<!--				address="{City}"-->
+						<!--				rating="{/BusinessPartnerSet/CustSat}"-->
+						<!--				lastContact="{ContactDate}"-->
+						<!--				nextContact="{ContactDate}"-->
+						<!--				press="onTileTap"-->
+						<!--				contactActive="true"-->
+						<!--				contactPress="showContact"-->
+						<!--				visible="true">-->
+						<!--				<ui:layoutData>-->
+										    <!-- span hat einen Wertebereich von 1 bis 12 -->
+						<!--					<layout:GridData span="L6 M6 S12"></layout:GridData>-->
+						<!--				</ui:layoutData>-->
+						<!--			</ui:OverviewTile>-->
+						<!--		</layout:content>-->
+						<!--	</layout:Grid>-->
+						<!--</VBox>-->
 						
 						<!--<EntityType Name="ContactPerson" sap:content-version="1">-->
       <!--          <Key>-->
