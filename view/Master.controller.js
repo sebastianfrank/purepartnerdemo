@@ -29,6 +29,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Master", {
 		
 	},
 	
+	// onAfterRendering comment
 	onAfterRendering: function() {
 		
 	},
