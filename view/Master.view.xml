@@ -52,7 +52,7 @@
                              <core:CustomData id="coreCustomData2" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
                         </customData>
                         <firstStatus>
-							<ObjectStatus id="kundenIndexStatusObject" text="KI" />
+							<ObjectStatus id="kundenIndexStatusObject" />
 						</firstStatus>
 						<attributes id="attributes">
 							
