@@ -433,15 +433,15 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 
 			dimensions: [{
-				name: "Year",
+				name: "Jahr",
 				value: "{Year}"
             }, {
-				name: 'City',
+				name: 'Stadt',
 				value: '{City}'
             }],
 			measures: [
 				{
-					name: 'Revenue',
+					name: 'Lohnsumme',
 					value: '{Revenue}'
                 }
             ],
@@ -481,7 +481,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 			},
 			title: {
 				visible: true,
-				text: 'Revenue by City and Year'
+				text: 'Lohnsummen pro Stadt und Jahr'
 			}
 		});
 
