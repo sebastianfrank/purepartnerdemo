@@ -47,7 +47,8 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Master", {
 		}); 
 		
 		statusIcon.bindProperty("icon", "CustSat", function(bValue) {
-			return bValue >= "090" ? "sap-icon://customer" : "sap-icon://alert";
+// 			return bValue >= "090" ? "sap-icon://customer" : "sap-icon://alert";
+            return "sap-icon://customer";
 		}); 
 		
 	}, 

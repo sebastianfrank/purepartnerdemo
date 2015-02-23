@@ -19,6 +19,8 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		this.handleOverviewTile();
 
 		this.initStackedColumn();
+		
+		this.initContactTable();
 	},
 
 	openActionSheet: function() {
@@ -433,15 +435,15 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 
 			dimensions: [{
-				name: "Jahr",
+				name: "Year",
 				value: "{Year}"
             }, {
-				name: 'Stadt',
+				name: 'City',
 				value: '{City}'
             }],
 			measures: [
 				{
-					name: 'Lohnsumme',
+					name: 'Revenue',
 					value: '{Revenue}'
                 }
             ],
@@ -468,9 +470,11 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 				'type': "Dimension",
 				'values': ["City"]
 			});
+			
 		oVizFrame.setVizProperties({
 			valueAxis: {
 				label: {
+				    text: 'Jahr',
 					formatString: 'u'
 				}
 			},
@@ -489,6 +493,13 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		oVizFrame.addFeed(feedAxisLabels);
 		oVizFrame.addFeed(feedColor);
 		oPopOver.connect(oVizFrame.getVizUid());
+	},
+	
+	initContactTable: function(oEvent) {
+
+		var list = this.getView().byId("list_details");
+// 	{BusinessPartnerSet>/ContactPersonSet}
+	
 	}
 
 });

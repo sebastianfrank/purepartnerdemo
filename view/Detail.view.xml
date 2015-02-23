@@ -43,36 +43,45 @@
 					<form:SimpleForm
 						id="adr_form1"
 						layout="ResponsiveGridLayout"
-						minWidth="1024"
+						minWidth="512"
 						maxContainerCols="2"
-                        labelSpanL="3"
-                        labelSpanM="3"
-                        emptySpanL="4"
-                        emptySpanM="4"
+                        labelSpanL="2"
+                        labelSpanM="2"
+                        labelSpanS="2"
+                        emptySpanL="1"
+                        emptySpanM="1"
+                        emptySpanS="1"
                         columnsL="2"
-                        columnsM="2">
+                        columnsM="2"
+                        columnsS="1">
+                        
+                        
                         <!--class="editableForm"-->
                         <!--editable="true"-->
 						<core:Title id="title1" text="Adresse" />
 						
+						<Label id="adr_text0_label" text="Name" />
 						<Text id="adr_text0" text="{Name}" >
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData3" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text>
 						
+						<Label id="adr_text1_label" text="Strasse" />
 						<Text id="adr_text1" text="{Street} {HouseNo}" >
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData4" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text>
 						
+						<Label id="adr_text2_label" text="Stadt" />
 						<Text id="adr_text2" text="{PostlCod1} {City}" >
 							<customData id="customData4">
 								<core:CustomData id="adr_coreCustomData5" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text>
 					    
+					    <Label id="adr_text3_label" text="Land" />
                         <Text id="adr_text3" text="{Country}" >
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData6" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
@@ -89,16 +98,16 @@
 					<form:SimpleForm
 						id="contact_form2"
 						layout="ResponsiveGridLayout"
-						minWidth="1024"
+						minWidth="512"
 						maxContainerCols="2"
                         labelSpanL="2"
-                        labelSpanM="6"
-                        labelSpanS="12"
+                        labelSpanM="2"
+                        labelSpanS="2"
                         emptySpanL="0"
                         emptySpanM="0"
                         emptySpanS="0"
-                        columnsL="1"
-                        columnsM="1"
+                        columnsL="2"
+                        columnsM="2"
                         columnsS="1"> 
 
 						<core:Title id="title2" text="Kontakt" />
@@ -135,22 +144,25 @@
 				
 				<!-- W5L: Chart -->
 				<IconTabFilter id="iconTabFilterChart" icon="sap-icon://vertical-stacked-chart">
-					 <form:SimpleForm id="formChart" layout="ResponsiveGridLayout" minWidth="1024"
-					    maxContainerCols="1"
+					 <form:SimpleForm id="formChart" layout="GridLayout"
+			            minWidth="1024"
+				        maxContainerCols="2"
                         labelSpanL="4"
-                        labelSpanM="2"
-                        labelSpanS="12"
+                        labelSpanM="4"
+                        labelSpanS="4"
                         emptySpanL="0"
                         emptySpanM="0"
                         emptySpanS="0"
-                        columnsL="1"
-                        columnsM="1"
-                        columnsS="1">
+                        columnsL="2"
+                        columnsM="2"
+                        columnsS="2"
+                        >
                         
 					 <core:Title id="titleChart" text="Chart" /> 
 
 					<viz:VizFrame id="idVizFrameStackedColumn" uiConfig="{applicationSet:'fiori'}"
-						vizType="stacked_column" width="900px" height="700px">
+						vizType="stacked_column">
+						<!--width="900px" height="700px">-->
 					</viz:VizFrame>
 					<viz:Popover id="idPopOver"></viz:Popover>
 
@@ -162,51 +174,61 @@
 				<!-- W5L: Overview tile -->
 				<IconTabFilter id="iconTabFilterOverview" icon="sap-icon://personnel-view">
 					<form:SimpleForm id="formOverview" layout="ResponsiveGridLayout"
-						minWidth="1024">
+						minWidth="512"
+						maxContainerCols="1"
+                        labelSpanL="2"
+                        labelSpanM="2"
+                        labelSpanS="2"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsL="1"
+                        columnsM="1"
+                        columnsS="1">
 						<core:Title id="titleOverview" text="Kontaktpersonen" />
 
 						<Button text="Kontakt hinzufügen" press="onAddContact" />
 						<!--<Button text="Kontakt hinzufügen" press="createODataStatement" />-->
 						
-<commons:FacetOverview 
-    heightType="Auto"
-    width= "500px"
-    press="pressFacetOverview"
-    class="marginTopLeft">
-            <commons:content>
+<!--<commons:FacetOverview -->
+<!--    heightType="Auto"-->
+<!--    width= "500px"-->
+<!--    press="pressFacetOverview"-->
+<!--    class="marginTopLeft">-->
+<!--            <commons:content>-->
 
-            <layout:Grid defaultSpan="L6 M6 S6" class="sapUtiContactsGrid">
-              <HBox class="sapUtiContactsBox">
-                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_01.png" width="48px" height="48px" class="sapUtiContactsImage"/>
-                <VBox>
-                <Text text="Megan Miller" class="sapUtiTextName"/>
-                <Text text="Sales Representative" class="sapUtiTextValue"/>
-                </VBox>
-              </HBox>
-              <HBox class="sapUtiContactsBox">
-                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_02.png" width="48px" height="48px" class="sapUtiContactsImage"/>
-                <VBox>
-                <Text text="Peter McNamara" class="sapUtiTextName"/>
-                <Text text="Sales Executive" class="sapUtiTextValue"/>
-                </VBox>
-              </HBox>
-              <HBox class="sapUtiContactsBox">
-                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_03.png" width="48px" height="48px" class="sapUtiContactsImage"/>
-                <VBox>
-                <Text text="George W.Brunick" class="sapUtiTextName"/>
-                <Text text="Cash Manager" class="sapUtiTextValue"/>
-                </VBox>
-              </HBox>
-              <HBox class="sapUtiContactsBox">
-                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_04.png" width="48px" height="48px" class="sapUtiContactsImage"/>
-                <VBox>
-                <Text text="Lilian R.Owens" class="sapUtiTextName"/>
-                <Text text="Cash Manager" class="sapUtiTextValue"/>
-                </VBox>
-              </HBox>
-            </layout:Grid>
-            </commons:content>
-  </commons:FacetOverview>
+<!--            <layout:Grid defaultSpan="L6 M6 S6" class="sapUtiContactsGrid">-->
+<!--              <HBox class="sapUtiContactsBox">-->
+<!--                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_01.png" width="48px" height="48px" class="sapUtiContactsImage"/>-->
+<!--                <VBox>-->
+<!--                <Text text="Megan Miller" class="sapUtiTextName"/>-->
+<!--                <Text text="Sales Representative" class="sapUtiTextValue"/>-->
+<!--                </VBox>-->
+<!--              </HBox>-->
+<!--              <HBox class="sapUtiContactsBox">-->
+<!--                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_02.png" width="48px" height="48px" class="sapUtiContactsImage"/>-->
+<!--                <VBox>-->
+<!--                <Text text="Peter McNamara" class="sapUtiTextName"/>-->
+<!--                <Text text="Sales Executive" class="sapUtiTextValue"/>-->
+<!--                </VBox>-->
+<!--              </HBox>-->
+<!--              <HBox class="sapUtiContactsBox">-->
+<!--                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_03.png" width="48px" height="48px" class="sapUtiContactsImage"/>-->
+<!--                <VBox>-->
+<!--                <Text text="George W.Brunick" class="sapUtiTextName"/>-->
+<!--                <Text text="Cash Manager" class="sapUtiTextValue"/>-->
+<!--                </VBox>-->
+<!--              </HBox>-->
+<!--              <HBox class="sapUtiContactsBox">-->
+<!--                <Image src="test-resources/sap/suite/ui/commons/demokit/images/persons/img_contacts_04.png" width="48px" height="48px" class="sapUtiContactsImage"/>-->
+<!--                <VBox>-->
+<!--                <Text text="Lilian R.Owens" class="sapUtiTextName"/>-->
+<!--                <Text text="Cash Manager" class="sapUtiTextValue"/>-->
+<!--                </VBox>-->
+<!--              </HBox>-->
+<!--            </layout:Grid>-->
+<!--            </commons:content>-->
+<!--  </commons:FacetOverview>-->
 
   <!--<List-->
   <!--  items="{/BusinessPartnerSet('3000')/ContactPersonSet}"-->
@@ -284,7 +306,29 @@
       <!--          <Property Name="Channel" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
       <!--          <Property Name="Description" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
       <!--          <NavigationProperty Name="BusinessPartner" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="ToRole_zui5_bp_to_cp_association" ToRole="FromRole_zui5_bp_to_cp_association"/>-->
-            
+
+	        <List id="list_details" items="{/ContactPersonSet}" mode="{device>/listMode}"
+		
+				select="handleSelect" growing="true" growingScrollToLoad="true"
+				delete="handleDelete">
+
+				 <items id="listItems_details">
+					<ObjectListItem id="mainListItem_details" type="{device>/listItemType}"
+					 title="{Firstname} {Lastname}"
+					 icon="{PartnerPicUrl}"
+					 number="{Telephone}"
+					 press="handleSelect_ContactPerson">
+
+						<attributes id="attributes">
+							
+								<ObjectAttribute id="Contact_Description" text="{Description}">
+								</ObjectAttribute>
+							
+						</attributes>
+					</ObjectListItem>
+					
+				</items>
+			</List>
 
 						<core:ExtensionPoint name="extIconTabFilterFormOverview" />
 
