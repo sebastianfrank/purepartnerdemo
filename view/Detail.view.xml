@@ -144,21 +144,25 @@
 				
 				<!-- W5L: Chart -->
 				<IconTabFilter id="iconTabFilterChart" icon="sap-icon://vertical-stacked-chart">
-					 <form:SimpleForm id="formChart" layout="GridLayout"
-			            minWidth="1024"
-				        maxContainerCols="2"
-                        labelSpanL="4"
-                        labelSpanM="4"
-                        labelSpanS="4"
-                        emptySpanL="0"
-                        emptySpanM="0"
-                        emptySpanS="0"
-                        columnsL="2"
-                        columnsM="2"
-                        columnsS="2"
-                        >
+				<Toolbar id="bar1_chart">
+			        <Text text="Chart" class="sapMH3FontSize"/>
+			        <ToolbarSpacer/>
+			    </Toolbar>
+				
+					 <!--<form:SimpleForm id="formChart" layout="GridLayout"-->
+			   <!--         minWidth="1024"-->
+				  <!--      maxContainerCols="1"-->
+      <!--                  labelSpanL="1"-->
+      <!--                  labelSpanM="1"-->
+      <!--                  labelSpanS="1"-->
+      <!--                  emptySpanL="0"-->
+      <!--                  emptySpanM="0"-->
+      <!--                  emptySpanS="0"-->
+      <!--                  columnsL="1"-->
+      <!--                  columnsM="1"-->
+      <!--                  columnsS="1">-->
                         
-					 <core:Title id="titleChart" text="Chart" /> 
+					 <!--<core:Title id="titleChart" text="Chart" /> -->
 
 					<viz:VizFrame id="idVizFrameStackedColumn" uiConfig="{applicationSet:'fiori'}"
 						vizType="stacked_column">
@@ -168,26 +172,39 @@
 
 					<core:ExtensionPoint name="extIconTabFilterFormChart" />
 
-					 </form:SimpleForm> 
+					 <!--</form:SimpleForm> -->
 				</IconTabFilter>
 
 				<!-- W5L: Overview tile -->
 				<IconTabFilter id="iconTabFilterOverview" icon="sap-icon://personnel-view">
+				
+		<!--<subHeader id="subHeader_Contact">-->
+		<!--<headerToolbar>-->
+			<Toolbar id="bar1_contact">
+			        <Text text="Kontaktpersonen" class="sapMH3FontSize"/>
+			        <ToolbarSpacer/>
+				    <Button
+                        icon="sap-icon://add-contact"
+                        press="handleCreateCP" />
+			</Toolbar>
+		<!--</headerToolbar>-->
+		<!--</subHeader>-->
+				
 					<form:SimpleForm id="formOverview" layout="ResponsiveGridLayout"
 						minWidth="512"
 						maxContainerCols="1"
-                        labelSpanL="2"
-                        labelSpanM="2"
-                        labelSpanS="2"
+                        labelSpanL="1"
+                        labelSpanM="1"
+                        labelSpanS="1"
                         emptySpanL="0"
                         emptySpanM="0"
                         emptySpanS="0"
                         columnsL="1"
                         columnsM="1"
                         columnsS="1">
-						<core:Title id="titleOverview" text="Kontaktpersonen" />
-
-						<Button text="Kontakt hinzufügen" press="onAddContact" />
+						<!--<core:Title id="titleOverview" text="Kontaktpersonen" />-->
+						
+						<!--<Button text="Kontakt hinzufügen" press="onAddContact" />-->
 						<!--<Button text="Kontakt hinzufügen" press="createODataStatement" />-->
 						
 <!--<commons:FacetOverview -->
