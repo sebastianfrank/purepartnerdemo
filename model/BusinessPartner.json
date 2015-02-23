@@ -1,0 +1,251 @@
+[{
+	"Partner": "Partner 1",
+	"Bpext": "Bpext 1",
+	"Name": "Name 1",
+	"City": "City 1",
+	"PostlCod1": "PostlCod1 1",
+	"Street": "Street 1",
+	"HouseNo": "HouseNo 1",
+	"Country": "Country 1",
+	"Langu": "Langu 1",
+	"Telephone": "Telephone 1",
+	"Mobile": "Mobile 1",
+	"Email": "Email 1",
+	"Url": "Url 1",
+	"CustSeg": "CustSeg 1",
+	"CustSat": "CustSat 1",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 1')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 1')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 2",
+	"Bpext": "Bpext 2",
+	"Name": "Name 2",
+	"City": "City 2",
+	"PostlCod1": "PostlCod1 2",
+	"Street": "Street 2",
+	"HouseNo": "HouseNo 2",
+	"Country": "Country 2",
+	"Langu": "Langu 2",
+	"Telephone": "Telephone 2",
+	"Mobile": "Mobile 2",
+	"Email": "Email 2",
+	"Url": "Url 2",
+	"CustSeg": "CustSeg 2",
+	"CustSat": "CustSat 2",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 2')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 2')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 3",
+	"Bpext": "Bpext 3",
+	"Name": "Name 3",
+	"City": "City 3",
+	"PostlCod1": "PostlCod1 3",
+	"Street": "Street 3",
+	"HouseNo": "HouseNo 3",
+	"Country": "Country 3",
+	"Langu": "Langu 3",
+	"Telephone": "Telephone 3",
+	"Mobile": "Mobile 3",
+	"Email": "Email 3",
+	"Url": "Url 3",
+	"CustSeg": "CustSeg 3",
+	"CustSat": "CustSat 3",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 3')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 3')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 4",
+	"Bpext": "Bpext 4",
+	"Name": "Name 4",
+	"City": "City 4",
+	"PostlCod1": "PostlCod1 4",
+	"Street": "Street 4",
+	"HouseNo": "HouseNo 4",
+	"Country": "Country 4",
+	"Langu": "Langu 4",
+	"Telephone": "Telephone 4",
+	"Mobile": "Mobile 4",
+	"Email": "Email 4",
+	"Url": "Url 4",
+	"CustSeg": "CustSeg 4",
+	"CustSat": "CustSat 4",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 4')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 4')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 5",
+	"Bpext": "Bpext 5",
+	"Name": "Name 5",
+	"City": "City 5",
+	"PostlCod1": "PostlCod1 5",
+	"Street": "Street 5",
+	"HouseNo": "HouseNo 5",
+	"Country": "Country 5",
+	"Langu": "Langu 5",
+	"Telephone": "Telephone 5",
+	"Mobile": "Mobile 5",
+	"Email": "Email 5",
+	"Url": "Url 5",
+	"CustSeg": "CustSeg 5",
+	"CustSat": "CustSat 5",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 5')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 5')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 6",
+	"Bpext": "Bpext 6",
+	"Name": "Name 6",
+	"City": "City 6",
+	"PostlCod1": "PostlCod1 6",
+	"Street": "Street 6",
+	"HouseNo": "HouseNo 6",
+	"Country": "Country 6",
+	"Langu": "Langu 6",
+	"Telephone": "Telephone 6",
+	"Mobile": "Mobile 6",
+	"Email": "Email 6",
+	"Url": "Url 6",
+	"CustSeg": "CustSeg 6",
+	"CustSat": "CustSat 6",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 6')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 6')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 7",
+	"Bpext": "Bpext 7",
+	"Name": "Name 7",
+	"City": "City 7",
+	"PostlCod1": "PostlCod1 7",
+	"Street": "Street 7",
+	"HouseNo": "HouseNo 7",
+	"Country": "Country 7",
+	"Langu": "Langu 7",
+	"Telephone": "Telephone 7",
+	"Mobile": "Mobile 7",
+	"Email": "Email 7",
+	"Url": "Url 7",
+	"CustSeg": "CustSeg 7",
+	"CustSat": "CustSat 7",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 7')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 7')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 8",
+	"Bpext": "Bpext 8",
+	"Name": "Name 8",
+	"City": "City 8",
+	"PostlCod1": "PostlCod1 8",
+	"Street": "Street 8",
+	"HouseNo": "HouseNo 8",
+	"Country": "Country 8",
+	"Langu": "Langu 8",
+	"Telephone": "Telephone 8",
+	"Mobile": "Mobile 8",
+	"Email": "Email 8",
+	"Url": "Url 8",
+	"CustSeg": "CustSeg 8",
+	"CustSat": "CustSat 8",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 8')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 8')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 9",
+	"Bpext": "Bpext 9",
+	"Name": "Name 9",
+	"City": "City 9",
+	"PostlCod1": "PostlCod1 9",
+	"Street": "Street 9",
+	"HouseNo": "HouseNo 9",
+	"Country": "Country 9",
+	"Langu": "Langu 9",
+	"Telephone": "Telephone 9",
+	"Mobile": "Mobile 9",
+	"Email": "Email 9",
+	"Url": "Url 9",
+	"CustSeg": "CustSeg 9",
+	"CustSat": "CustSat 9",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 9')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 9')/ContactPersonSet"
+		}
+	}
+}, {
+	"Partner": "Partner 10",
+	"Bpext": "Bpext 10",
+	"Name": "Name 10",
+	"City": "City 10",
+	"PostlCod1": "PostlCod1 10",
+	"Street": "Street 10",
+	"HouseNo": "HouseNo 10",
+	"Country": "Country 10",
+	"Langu": "Langu 10",
+	"Telephone": "Telephone 10",
+	"Mobile": "Mobile 10",
+	"Email": "Email 10",
+	"Url": "Url 10",
+	"CustSeg": "CustSeg 10",
+	"CustSat": "CustSat 10",
+	"__metadata": {
+		"uri": "BusinessPartnerSet('Partner 10')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.BusinessPartner"
+	},
+	"ContactPersonSet": {
+		"__deferred": {
+			"uri": "BusinessPartnerSet('Partner 10')/ContactPersonSet"
+		}
+	}
+}]

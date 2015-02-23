@@ -431,24 +431,25 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 		var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
 		var oPopOver = this.getView().byId("idPopOver");
-		var oModel = new sap.ui.model.json.JSONModel("test-resources/sap/viz/demokit/dataset/bookstore_fiori/ByYearCity_sum.json");
+// 		var oModel = new sap.ui.model.json.JSONModel("test-resources/sap/viz/demokit/dataset/bookstore_fiori/ByYearCity_sum.json");
+		var oModel = new sap.ui.model.json.JSONModel("pure_resources/Lohnsumme_Agentur_Jahr.json");
 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 
 			dimensions: [{
-				name: "Year",
-				value: "{Year}"
+				name: "Jahr",
+				value: "{Jahr}"
             }, {
-				name: 'City',
-				value: '{City}'
+				name: 'Agentur',
+				value: '{Agentur}'
             }],
 			measures: [
 				{
-					name: 'Revenue',
-					value: '{Revenue}'
+					name: 'Lohnsumme',
+					value: '{Lohnsumme}'
                 }
             ],
 			data: {
-				path: "/book"
+				path: "/Lohnsumme"
 			}
 		});
 
@@ -458,23 +459,22 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		var feedPrimaryValues = new sap.viz.ui5.controls.common.feeds.FeedItem({
 				'uid': "primaryValues",
 				'type': "Measure",
-				'values': ["Revenue"]
+				'values': ["Lohnsumme"]
 			}),
 			feedAxisLabels = new sap.viz.ui5.controls.common.feeds.FeedItem({
 				'uid': "axisLabels",
 				'type': "Dimension",
-				'values': ["Year"]
+				'values': ["Jahr"]
 			}),
 			feedColor = new sap.viz.ui5.controls.common.feeds.FeedItem({
 				'uid': "regionColor",
 				'type': "Dimension",
-				'values': ["City"]
+				'values': ["Agentur"]
 			});
 			
 		oVizFrame.setVizProperties({
 			valueAxis: {
 				label: {
-				    text: 'Jahr',
 					formatString: 'u'
 				}
 			},

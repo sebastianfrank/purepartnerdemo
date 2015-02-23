@@ -1,0 +1,241 @@
+[{
+	"Partner": "Partner 1",
+	"PartnerCp": "PartnerCp 1",
+	"Firstname": "Firstname 1",
+	"Lastname": "Lastname 1",
+	"City": "City 1",
+	"Langu": "Langu 1",
+	"Telephone": "Telephone 1",
+	"Mobile": "Mobile 1",
+	"Email": "Email 1",
+	"Facebook": "Facebook 1",
+	"ContactDate": "/Date(1045407668000)/",
+	"Category": "Category 1",
+	"Channel": "Channel 1",
+	"Description": "Description 1",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 1',PartnerCp='PartnerCp 1')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 1',PartnerCp='PartnerCp 1')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 1",
+	"PartnerCp": "PartnerCp 2",
+	"Firstname": "Firstname 2",
+	"Lastname": "Lastname 2",
+	"City": "City 2",
+	"Langu": "Langu 2",
+	"Telephone": "Telephone 2",
+	"Mobile": "Mobile 2",
+	"Email": "Email 2",
+	"Facebook": "Facebook 2",
+	"ContactDate": "/Date(955202468000)/",
+	"Category": "Category 2",
+	"Channel": "Channel 2",
+	"Description": "Description 2",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 2',PartnerCp='PartnerCp 2')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 2',PartnerCp='PartnerCp 2')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 3",
+	"PartnerCp": "PartnerCp 3",
+	"Firstname": "Firstname 3",
+	"Lastname": "Lastname 3",
+	"City": "City 3",
+	"Langu": "Langu 3",
+	"Telephone": "Telephone 3",
+	"Mobile": "Mobile 3",
+	"Email": "Email 3",
+	"Facebook": "Facebook 3",
+	"ContactDate": "/Date(999439268000)/",
+	"Category": "Category 3",
+	"Channel": "Channel 3",
+	"Description": "Description 3",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 3',PartnerCp='PartnerCp 3')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 3',PartnerCp='PartnerCp 3')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 3",
+	"PartnerCp": "PartnerCp 4",
+	"Firstname": "Firstname 4",
+	"Lastname": "Lastname 4",
+	"City": "City 4",
+	"Langu": "Langu 4",
+	"Telephone": "Telephone 4",
+	"Mobile": "Mobile 4",
+	"Email": "Email 4",
+	"Facebook": "Facebook 4",
+	"ContactDate": "/Date(1570456868000)/",
+	"Category": "Category 4",
+	"Channel": "Channel 4",
+	"Description": "Description 4",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 4',PartnerCp='PartnerCp 4')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 4',PartnerCp='PartnerCp 4')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 5",
+	"PartnerCp": "PartnerCp 5",
+	"Firstname": "Firstname 5",
+	"Lastname": "Lastname 5",
+	"City": "City 5",
+	"Langu": "Langu 5",
+	"Telephone": "Telephone 5",
+	"Mobile": "Mobile 5",
+	"Email": "Email 5",
+	"Facebook": "Facebook 5",
+	"ContactDate": "/Date(1042210868000)/",
+	"Category": "Category 5",
+	"Channel": "Channel 5",
+	"Description": "Description 5",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 5',PartnerCp='PartnerCp 5')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 5',PartnerCp='PartnerCp 5')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 6",
+	"PartnerCp": "PartnerCp 6",
+	"Firstname": "Firstname 6",
+	"Lastname": "Lastname 6",
+	"City": "City 6",
+	"Langu": "Langu 6",
+	"Telephone": "Telephone 6",
+	"Mobile": "Mobile 6",
+	"Email": "Email 6",
+	"Facebook": "Facebook 6",
+	"ContactDate": "/Date(1507212068000)/",
+	"Category": "Category 6",
+	"Channel": "Channel 6",
+	"Description": "Description 6",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 6',PartnerCp='PartnerCp 6')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 6',PartnerCp='PartnerCp 6')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 7",
+	"PartnerCp": "PartnerCp 7",
+	"Firstname": "Firstname 7",
+	"Lastname": "Lastname 7",
+	"City": "City 7",
+	"Langu": "Langu 7",
+	"Telephone": "Telephone 7",
+	"Mobile": "Mobile 7",
+	"Email": "Email 7",
+	"Facebook": "Facebook 7",
+	"ContactDate": "/Date(1370786468000)/",
+	"Category": "Category 7",
+	"Channel": "Channel 7",
+	"Description": "Description 7",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 7',PartnerCp='PartnerCp 7')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 7',PartnerCp='PartnerCp 7')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 8",
+	"PartnerCp": "PartnerCp 8",
+	"Firstname": "Firstname 8",
+	"Lastname": "Lastname 8",
+	"City": "City 8",
+	"Langu": "Langu 8",
+	"Telephone": "Telephone 8",
+	"Mobile": "Mobile 8",
+	"Email": "Email 8",
+	"Facebook": "Facebook 8",
+	"ContactDate": "/Date(957794468000)/",
+	"Category": "Category 8",
+	"Channel": "Channel 8",
+	"Description": "Description 8",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 8',PartnerCp='PartnerCp 8')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 8',PartnerCp='PartnerCp 8')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 9",
+	"PartnerCp": "PartnerCp 9",
+	"Firstname": "Firstname 9",
+	"Lastname": "Lastname 9",
+	"City": "City 9",
+	"Langu": "Langu 9",
+	"Telephone": "Telephone 9",
+	"Mobile": "Mobile 9",
+	"Email": "Email 9",
+	"Facebook": "Facebook 9",
+	"ContactDate": "/Date(1431784868000)/",
+	"Category": "Category 9",
+	"Channel": "Channel 9",
+	"Description": "Description 9",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 9',PartnerCp='PartnerCp 9')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 9',PartnerCp='PartnerCp 9')/BusinessPartner"
+		}
+	}
+}, {
+	"Partner": "Partner 10",
+	"PartnerCp": "PartnerCp 10",
+	"Firstname": "Firstname 10",
+	"Lastname": "Lastname 10",
+	"City": "City 10",
+	"Langu": "Langu 10",
+	"Telephone": "Telephone 10",
+	"Mobile": "Mobile 10",
+	"Email": "Email 10",
+	"Facebook": "Facebook 10",
+	"ContactDate": "/Date(1370786468000)/",
+	"Category": "Category 10",
+	"Channel": "Channel 10",
+	"Description": "Description 10",
+	"__metadata": {
+		"uri": "ContactPersonSet(Partner='Partner 10',PartnerCp='PartnerCp 10')",
+		"type": "ZUI5_PURE_BUSINESS_PARTNER_SRV.ContactPerson"
+	},
+	"BusinessPartner": {
+		"__deferred": {
+			"uri": "ContactPersonSet(Partner='Partner 10',PartnerCp='PartnerCp 10')/BusinessPartner"
+		}
+	}
+}]

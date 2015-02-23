@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+	<!-- IMPORTANT
+		This HTML file is meant for testing the application/component standalone, outside the Unified Shell.
+		Some integration functionality, personalization etc. will not be available when running standalone.
+	 -->
+	
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		
+		<title>ui5_pure_businesspartner_app</title>
+		
+		<script id="sap-ui-bootstrap"
+				src="resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m, sap.me"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-compatVersion="1.16"
+				data-sap-ui-resourceroots='{"ui5_pure_businesspartner_app": "./"}'>
+		</script>
+<script>
+var bRunWithMock = true;
+var sRunWithMock = jQuery.sap.getUriParameters().get('run-with-mock');
+if (sRunWithMock === 'false') {
+bRunWithMock = false;
+}
+if (bRunWithMock) {
+jQuery.sap.require('sap.ui.core.util.MockServer');
+var uri = '/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV/';
+var oMock = new sap.ui.core.util.MockServer({rootUri : uri});
+oMock.simulate('model/metadata.xml', { sMockdataBaseUrl : 'model/', bGenerateMissingMockData : true });
+oMock.start();
+	jQuery(document).ready(function($) {  sap.m.MessageToast.show('Running in demo mode with mock data.', {  duration : 4000 });
+});
+}
+</script>
+		
+		<!-- Application launch configuration -->
+		<script>
+			sap.ui.getCore().attachInitEvent(function() {
+				var oComponentContainer = new sap.ui.core.ComponentContainer({
+					height : "100%",
+					name : "ui5_pure_businesspartner_app"
+				});
+				oComponentContainer.placeAt("content");
+			});
+		</script>
+	</head>
+	
+	<!-- UI Content -->
+	<body class="sapUiBody" id="content" role="application">
+	</body>
+	
+</html>
