@@ -324,7 +324,7 @@
       <!--          <Property Name="Description" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
       <!--          <NavigationProperty Name="BusinessPartner" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="ToRole_zui5_bp_to_cp_association" ToRole="FromRole_zui5_bp_to_cp_association"/>-->
 
-	        <List id="list_details" items="{/ContactPersonSet}" mode="{device>/listMode}"
+	        <List id="list_details" items="{ContactPersonSet}" mode="{device>/listMode}"
 		
 				select="handleSelect" growing="true" growingScrollToLoad="true"
 				delete="handleDelete">

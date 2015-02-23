@@ -20,7 +20,15 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 		this.initStackedColumn();
 		
-		this.initContactTable();
+		
+	},
+	
+	onBeforeRendering: function() {
+
+	},
+	
+	onAfterRendering: function() {
+	    this.initContactTable();
 	},
 
 	openActionSheet: function() {
@@ -439,8 +447,8 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 				name: "Jahr",
 				value: "{Jahr}"
             }, {
-				name: 'Agentur',
-				value: '{Agentur}'
+				name: 'Betriebsteil',
+				value: '{Betriebsteil}'
             }],
 			measures: [
 				{
@@ -449,7 +457,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
                 }
             ],
 			data: {
-				path: "/Lohnsumme"
+				path: "/Betriebsteil"
 			}
 		});
 
@@ -469,7 +477,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 			feedColor = new sap.viz.ui5.controls.common.feeds.FeedItem({
 				'uid': "regionColor",
 				'type': "Dimension",
-				'values': ["Agentur"]
+				'values': ["Betriebsteil"]
 			});
 			
 		oVizFrame.setVizProperties({
@@ -485,7 +493,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 			},
 			title: {
 				visible: true,
-				text: 'Lohnsummen pro Stadt und Jahr'
+				text: 'Lohnsummen pro Betriebsteil und Jahr'
 			}
 		});
 
@@ -497,9 +505,15 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 	
 	initContactTable: function(oEvent) {
 
-		var list = this.getView().byId("list_details");
-// 	{BusinessPartnerSet>/ContactPersonSet}
-	
+//         var view = this.getView();
+// 		var list = view.byId("list_details");
+// 		var page = view.byId("detailsPage");
+// 		var bp_binding_context = page.getBindingContext();
+// 		if ( bp_binding_context ) {
+// 		    bp_binding_context.getPath().substr(1); //BusinessPartnerSet('3000')
+// 		    var cp_binding_context = bp_binding_context + '/' + 'ContactPersonSet';
+// 		    list.bindElement(cp_binding_context);
+// 		}
 	}
 
 });

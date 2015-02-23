@@ -1,7 +1,7 @@
 {
-    "Lohnsumme": [{
+    "Betriebsteil": [{
         "Jahr": 2001,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 68652.00,
         "Unit Price": 1117.60,
         "Units Available": 13076,
@@ -10,7 +10,7 @@
         "Units Sold": 4437
     }, {
         "Jahr": 2001,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 4689.02,
         "Unit Price": 175.78,
         "Units Available": 2049,
@@ -19,7 +19,7 @@
         "Units Sold": 792
     }, {
         "Jahr": 2001,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 140522.40,
         "Unit Price": 1708.42,
         "Units Available": 20130,
@@ -28,7 +28,7 @@
         "Units Sold": 7319
     }, {
         "Jahr": 2002,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 58824.50,
         "Unit Price": 689.18,
         "Units Available": 16055,
@@ -37,7 +37,7 @@
         "Units Sold": 5255
     }, {
         "Jahr": 2002,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 45621.10,
         "Unit Price": 760.11,
         "Units Available": 8683,
@@ -46,7 +46,7 @@
         "Units Sold": 3231
     }, {
         "Jahr": 2002,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 119570.86,
         "Unit Price": 1025.80,
         "Units Available": 16010,
@@ -55,7 +55,7 @@
         "Units Sold": 4121
     }, {
         "Jahr": 2003,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 43450.40,
         "Unit Price": 811.06,
         "Units Available": 12560,
@@ -64,7 +64,7 @@
         "Units Sold": 3490
     }, {
         "Jahr": 2003,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 55013.16,
         "Unit Price": 780.17,
         "Units Available": 7767,
@@ -73,7 +73,7 @@
         "Units Sold": 2619
     }, {
         "Jahr": 2003,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 128390.69,
         "Unit Price": 1197.07,
         "Units Available": 18508,
@@ -82,7 +82,7 @@
         "Units Sold": 6085
     }, {
         "Jahr": 2004,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 123608.10,
         "Unit Price": 1321.31,
         "Units Available": 17606,
@@ -91,7 +91,7 @@
         "Units Sold": 5056
     }, {
         "Jahr": 2004,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 26932.47,
         "Unit Price": 494.09,
         "Units Available": 7195,
@@ -100,7 +100,7 @@
         "Units Sold": 2615
     }, {
         "Jahr": 2004,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 75632.14,
         "Unit Price": 1212.40,
         "Units Available": 14308,
@@ -109,7 +109,7 @@
         "Units Sold": 4913
     }, {
         "Jahr": 2005,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 116767.50,
         "Unit Price": 1252.65,
         "Units Available": 20463,
@@ -118,7 +118,7 @@
         "Units Sold": 5258
     }, {
         "Jahr": 2005,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 78325.67,
         "Unit Price": 874.30,
         "Units Available": 9145,
@@ -127,7 +127,7 @@
         "Units Sold": 2913
     }, {
         "Jahr": 2005,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 72061.20,
         "Unit Price": 1109.54,
         "Units Available": 19199,
@@ -136,7 +136,7 @@
         "Units Sold": 5472
     }, {
         "Jahr": 2006,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 76694.04,
         "Unit Price": 1003.73,
         "Units Available": 16216,
@@ -145,7 +145,7 @@
         "Units Sold": 4296
     }, {
         "Jahr": 2006,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 84784.66,
         "Unit Price": 736.21,
         "Units Available": 10709,
@@ -154,7 +154,7 @@
         "Units Sold": 4676
     }, {
         "Jahr": 2006,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 81743.18,
         "Unit Price": 1255.73,
         "Units Available": 15082,
@@ -163,7 +163,7 @@
         "Units Sold": 4591
     }, {
         "Jahr": 2007,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 138143.54,
         "Unit Price": 1601.95,
         "Units Available": 19159,
@@ -172,7 +172,7 @@
         "Units Sold": 6909
     }, {
         "Jahr": 2007,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 41780.64,
         "Unit Price": 390.28,
         "Units Available": 6449,
@@ -181,7 +181,7 @@
         "Units Sold": 2332
     }, {
         "Jahr": 2007,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 104599.31,
         "Unit Price": 1212.42,
         "Units Available": 19436,
@@ -190,7 +190,7 @@
         "Units Sold": 6895
     }, {
         "Jahr": 2008,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 162821.35,
         "Unit Price": 1907.51,
         "Units Available": 21139,
@@ -199,7 +199,7 @@
         "Units Sold": 5987
     }, {
         "Jahr": 2008,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 23175.68,
         "Unit Price": 523.80,
         "Units Available": 6713,
@@ -208,7 +208,7 @@
         "Units Sold": 1679
     }, {
         "Jahr": 2008,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 69239.07,
         "Unit Price": 999.98,
         "Units Available": 17545,
@@ -217,7 +217,7 @@
         "Units Sold": 6107
     }, {
         "Jahr": 2009,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 89477.45,
         "Unit Price": 1075.12,
         "Units Available": 17443,
@@ -226,7 +226,7 @@
         "Units Sold": 6043
     }, {
         "Jahr": 2009,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 26297.98,
         "Unit Price": 443.15,
         "Units Available": 9595,
@@ -235,7 +235,7 @@
         "Units Sold": 2573
     }, {
         "Jahr": 2009,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 154669.75,
         "Unit Price": 1454.05,
         "Units Available": 19467,
@@ -244,7 +244,7 @@
         "Units Sold": 7441
     }, {
         "Jahr": 2010,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 106805.21,
         "Unit Price": 1349.72,
         "Units Available": 17481,
@@ -253,7 +253,7 @@
         "Units Sold": 5729
     }, {
         "Jahr": 2010,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 131743.22,
         "Unit Price": 1058.53,
         "Units Available": 15066,
@@ -262,7 +262,7 @@
         "Units Sold": 4319
     }, {
         "Jahr": 2010,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 226517.61,
         "Unit Price": 2705.07,
         "Units Available": 23641,
@@ -271,7 +271,7 @@
         "Units Sold": 6836
     }, {
         "Jahr": 2011,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 123440.88,
         "Unit Price": 1193.04,
         "Units Available": 12529,
@@ -280,7 +280,7 @@
         "Units Sold": 5030
     }, {
         "Jahr": 2011,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 60205.46,
         "Unit Price": 741.50,
         "Units Available": 7885,
@@ -289,7 +289,7 @@
         "Units Sold": 2698
     }, {
         "Jahr": 2011,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 141169.36,
         "Unit Price": 1476.36,
         "Units Available": 17204,
@@ -298,7 +298,7 @@
         "Units Sold": 6684
     }, {
         "Jahr": 2012,
-        "Agentur": "Bern (A03)",
+        "Betriebsteil": "A",
         "Profit": 199884.11,
         "Unit Price": 1810.02,
         "Units Available": 17699,
@@ -307,7 +307,7 @@
         "Units Sold": 7092
     }, {
         "Jahr": 2012,
-        "Agentur": "Zürich (A07)",
+        "Betriebsteil": "B",
         "Profit": 58870.05,
         "Unit Price": 1019.55,
         "Units Available": 11165,
@@ -316,7 +316,7 @@
         "Units Sold": 2730
     }, {
         "Jahr": 2012,
-        "Agentur": "St. Gallen (A09)",
+        "Betriebsteil": "C",
         "Profit": 121861.04,
         "Unit Price": 1432.99,
         "Units Available": 17887,
