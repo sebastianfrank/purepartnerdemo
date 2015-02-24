@@ -35,6 +35,13 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 //
 //	}
 
+	dateFromString : function(sDate) {
+		// Try to create date directly, otherwise assume dd/mm/yyyy
+		var oDate = new Date(sDate);
+		return oDate === "Invalid Date" ? new Date(sDate.split("/").reverse()) : oDate;
+
+	},
+
 initializeNewProductData : function() {
 		this.getView().getModel("newProduct").setData({
 			Detail: {
@@ -132,7 +139,7 @@ saveProduct : function(nID) {
 	},
 	
 	onCancel : function() {
-		sap.ui.core.UIComponent.geRouterFor(this).backWithoutHash(this.getView());
+		sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
 	},
 	
     onDialogClose : function(oEvent) {
