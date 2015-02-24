@@ -35,30 +35,137 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 //
 //	}
 
-	onInit: function() {
-		var view = this.getView();
-
-		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
-			// when detail navigation occurs, update the binding context
-			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
-				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
-				view.setBindingContext(context);
-				// Make sure the master is here
+initializeNewProductData : function() {
+		this.getView().getModel("newProduct").setData({
+			Detail: {
+				DiscontinuedFlag: false
 			}
-		}, this);
-
+		});
 	},
 
-	handleNavButtonPress: function(oEvent) {
-		var history = sap.ui.core.routing.History.getInstance();
-		var url = sap.ui.core.UIComponent.getRouterFor(this).getURL("master", {});
-		var direction = history.getDirection(url);
-		if ("Backwards" === direction) {
-			window.history.go(-1);
-		} else {
-			var replace = true; // otherwise we go backwards with a forward history
-			this.navTo(route, data, replace);
-		}
-	}
+onInit : function() {
+		this.getView().setModel(new sap.ui.model.json.JSONModel(), "newProduct");
+		this.initializeNewProductData();
+	},
+	
+saveProduct : function(nID) {
+		var mNewProduct = this.getView().getModel("newProduct").getData().Detail;
+		// Basic payload data
+		var mPayload = {
+			ID: nID,
+			Name: mNewProduct.Name,
+			Description: mNewProduct.Description,
+			ReleaseDate: this.dateFromString(mNewProduct.ReleaseDate),
+			Price: mNewProduct.Price.toString(),
+			Rating: mNewProduct.Rating
+		};
 
+		if (mNewProduct.DiscontinuedDate) {
+			mPayload.DiscontinuedDate = this.dateFromString(mNewProduct.DiscontinuedDate);
+		}
+// Add supplier & category associations
+		["Supplier", "Category"].forEach(function(sRelation) {
+			var oSelect = this.getView().byId("idSelect" + sRelation);
+			var sPath = oSelect.getSelectedItem().getBindingContext().getPath();
+			mPayload[sRelation] = {
+				__metadata: {
+					uri: sPath
+				}
+			};
+		}, this);
+		
+	// Send OData Create request
+		var oModel = this.getView().getModel();
+		oModel.create("/Products", mPayload, {
+			success : jQuery.proxy(function(mResponse) {
+				this.initializeNewProductData();
+				sap.ui.core.UIComponent.getRouterFor(this).navTo("product", {
+					from: "master",
+					product: "Products(" + mResponse.ID + ")",
+					tab: "supplier"
+				}, false);
+				jQuery.sap.require("sap.m.MessageToast");
+				// ID of newly inserted product is available in mResponse.ID
+				this.oBusyDialog.close();
+				sap.m.MessageToast.show("Product '" + mPayload.Name + "' added");
+			}, this),
+			error : jQuery.proxy(function() {
+				this.oBusyDialog.close();
+				this.showErrorAlert("Problem creating new product");
+			}, this)
+		});
+
+	},
+	
+
+	onSave : function() {
+		// Show message if no product name has been entered
+		// Otherwise, get highest existing ID, and invoke create for new product
+		if (!this.getView().getModel("newProduct").getProperty("/Detail/Name")) {
+			if (!this.oAlertDialog) {
+				this.oAlertDialog = sap.ui.xmlfragment("sap.ui.demo.tdg.view.NameRequiredDialog", this);
+				this.getView().addDependent(this.oAlertDialog);
+			}
+			this.oAlertDialog.open();
+	} else {
+			if (!this.oBusyDialog) {
+				this.oBusyDialog = new sap.m.BusyDialog();
+			}
+			this.oBusyDialog.open();
+			this.getView().getModel().read("/Products", {
+				urlParameters : {
+					"$top" : 1,
+					"$orderby" : "ID desc",
+					"$select" : "ID"
+				},
+				async : false,
+				success : jQuery.proxy(function(oData) {
+					this.saveProduct(oData.results[0].ID + 1);
+				}, this),
+				error : jQuery.proxy(function() {
+					this.oBusyDialog.close();
+					this.showErrorAlert("Cannot determine next ID for new product");
+				}, this)
+			});
+
+		}
+	},
+	
+	onCancel : function() {
+		sap.ui.core.UIComponent.geRouterFor(this).backWithoutHash(this.getView());
+	},
+	
+    onDialogClose : function(oEvent) {
+		oEvent.getSource().getParent().close();
+	}
 });
+	
+	
+
+// 	onInit: function() {
+// 		var view = this.getView();
+
+// 		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
+// 			// when detail navigation occurs, update the binding context
+// 			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
+// 				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
+// 				view.setBindingContext(context);
+// 				// Make sure the master is here
+// 			}
+// 		}, this);
+
+// 	},
+
+// 	handleNavButtonPress: function(oEvent) {
+// 		var history = sap.ui.core.routing.History.getInstance();
+// 		var url = sap.ui.core.UIComponent.getRouterFor(this).getURL("master", {});
+// 		var direction = history.getDirection(url);
+// 		if ("Backwards" === direction) {
+// 			window.history.go(-1);
+// 		} else {
+// 			var replace = true; // otherwise we go backwards with a forward history
+// 			this.navTo(route, data, replace);
+// 		}
+// 	}
+
+// });

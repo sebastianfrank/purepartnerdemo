@@ -1,21 +1,117 @@
 <mvc:View 
 	controllerName="ui5_pure_businesspartner_app.view.ContactPerson_CRUD"
-	xmlns="sap.m" 
-	xmlns:form="sap.ui.layout.form"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-	xmlns:viz="sap.viz.ui5.controls"
-	xmlns:viz5="sap.viz.ui5"
-	xmlns:vizd="sap.viz.ui5.data"
-	xmlns:layout="sap.ui.layout"
-	xmlns:ui="sap.ca.ui"
-	xmlns:commons="sap.suite.ui.commons">
-	<Page 
-		id="detailsPage"
-		title="{i18n>DETAIL_TITLE}"
-		class="sapUiFioriObjectPage"  
-		showNavButton="{device>/isPhone}" 
-		navButtonPress="handleNavButtonPress">
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:c="sap.ui.core"
+	xmlns="sap.m">
+	
+	<!--xmlns="sap.m" -->
+	<!--xmlns:form="sap.ui.layout.form"-->
+	<!--xmlns:mvc="sap.ui.core.mvc"-->
+	<!--xmlns:core="sap.ui.core"-->
+	<!--xmlns:viz="sap.viz.ui5.controls"-->
+	<!--xmlns:viz5="sap.viz.ui5"-->
+	<!--xmlns:vizd="sap.viz.ui5.data"-->
+	<!--xmlns:layout="sap.ui.layout"-->
+	<!--xmlns:ui="sap.ca.ui"-->
+	<!--xmlns:commons="sap.suite.ui.commons">-->
+	
+<!--<mvc:View-->
+<!--	controllerName="sap.ui.demo.tdg.view.AddProduct"-->
+	
+	<Page
+		class="sapUiFioriObjectPage"
+		title="{i18n>addProductTitle}">
+		<l:Grid
+			defaultSpan="L12 M12 S12"
+			width="auto">
+			<l:content>
+				<f:SimpleForm
+					id="idAddProductForm"
+					minWidth="800"
+					maxContainerCols="2"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					title="New Product"
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1"
+					class="editableForm">
+					<f:content>
+					
+
+						<!-- Basic info -->
+						<c:Title text="{i18n>addProductTitleBasic}" />
+						<Label text="{i18n>addProductLabelName}" />
+						<Input value="{newProduct>/Detail/Name}" />
+						<Label text="{i18n>addProductLabelDescription}" />
+						<TextArea value="{newProduct>/Detail/Description}" />
+						<Label text="{i18n>addProductLabelReleaseDate}" />
+						<DateTimeInput
+							type="Date"
+							value="{newProduct>/Detail/ReleaseDate}" />
+						<Label text="{i18n>addProductLabelPrice}" />
+						<Input value="{newProduct>/Detail/Price}" />
+						<Label text="{i18n>addProductLabelRating}" />
+						<RatingIndicator
+							visualMode="Full"
+							value="{newProduct>/Detail/Rating}" />
+							
+			<!-- Discontinued? -->
+	<!--				<c:Title text="{i18n>addProductTitleDiscontinued}" />-->
+	<!--				<Label text="{i18n>addProductLabelDiscontinuedFlag}" />-->
+	<!--				<CheckBox selected="{newProduct>/Detail/DiscontinuedFlag}" />-->
+	<!--				<Label-->
+	<!--					visible="{newProduct>/Detail/DiscontinuedFlag}"-->
+	<!--					text="{i18n>addProductLabelDiscontinuedDate}" />-->
+	<!--				<DateTimeInput-->
+	<!--					type="Date"-->
+	<!--					visible="{newProduct>/Detail/DiscontinuedFlag}"-->
+	<!--					value="{newProduct>/Detail/DiscontinuedDate}" />-->
+						
+	<!-- Supplier & Category -->
+	<!--					<c:Title text="{i18n>addProductTitleSupplierCategory}" />-->
+	<!--					<Label text="{i18n>addProductLabelSupplier}" />-->
+	<!--					<Select-->
+	<!--						id="idSelectSupplier"-->
+	<!--						items="{/Suppliers}"-->
+	<!--						width="100%">-->
+	<!--						<c:Item text="{Name}" />-->
+	<!--					</Select>-->
+	<!--					<Label text="{i18n>addProductLabelCategory}" />-->
+	<!--					<Select-->
+	<!--						id="idSelectCategory"-->
+	<!--						items="{/Categories}"-->
+	<!--						width="100%">-->
+	<!--						<c:Item text="{Name}" />-->
+	<!--					</Select>-->
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+		
+        <footer>
+			<Bar>
+				<contentRight>
+					<Button text="{i18n>addProductButtonSave}" type="Emphasized" press="onSave" />
+					<Button text="{i18n>addProductButtonCancel}" press="onCancel" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
+	
+	
+<!--	<Page -->
+<!--		id="detailsPage"-->
+<!--		title="{i18n>DETAIL_TITLE}"-->
+<!--		class="sapUiFioriObjectPage"  -->
+<!--		showNavButton="{device>/isPhone}" -->
+<!--		navButtonPress="handleNavButtonPress">-->
 		
 		    <!--<EntityType Name="ContactPerson" sap:content-version="1">-->
       <!--          <Key>-->
@@ -39,70 +135,69 @@
       <!--          <NavigationProperty Name="BusinessPartner" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="ToRole_zui5_bp_to_cp_association" ToRole="FromRole_zui5_bp_to_cp_association"/>-->
       <!--      </EntityType>-->
 	
-		<ObjectHeader id="header"
-			 title="{Firstname} {Lastname}"
-			 number="{PartnerCp}">
+<!--		<ObjectHeader id="header"-->
+<!--			 title="{Firstname} {Lastname}"-->
+<!--			 number="{PartnerCp}">-->
 			
-		</ObjectHeader>
+<!--		</ObjectHeader>-->
 		
-		<IconTabBar 
-			id="iconTabBar"
-			expanded="{device>/isNoPhone}" >
+<!--		<IconTabBar -->
+<!--			id="iconTabBar"-->
+<!--			expanded="{device>/isNoPhone}" >-->
 
-			<items id="detailsItems">
-				<IconTabFilter id="iconTabFilter1"
-					icon="sap-icon://personnel-view">
+<!--			<items id="detailsItems">-->
+<!--				<IconTabFilter id="iconTabFilter1"-->
+<!--					icon="sap-icon://personnel-view">-->
 					
-					<Toolbar id="bar1_contact">
-			            <Text text="Kontaktperson" class="sapMH3FontSize"/>
-			            <ToolbarSpacer/>
-				        <Button
-                            icon="sap-icon://add-contact"
-                            press="handleCreateCP" />
-			        </Toolbar>
+<!--					<Toolbar id="bar1_contact">-->
+<!--			            <Text text="Kontaktperson" class="sapMH3FontSize"/>-->
+<!--			            <ToolbarSpacer/>-->
+<!--				        <Button-->
+<!--                            icon="sap-icon://add-contact"-->
+<!--                            press="handleCreateCP" />-->
+<!--			        </Toolbar>-->
 					
-					<form:SimpleForm
-						id="adr_form1"
-						layout="ResponsiveGridLayout"
-						minWidth="512"
-						maxContainerCols="2"
-                        labelSpanL="2"
-                        labelSpanM="2"
-                        labelSpanS="2"
-                        emptySpanL="1"
-                        emptySpanM="1"
-                        emptySpanS="1"
-                        columnsL="2"
-                        columnsM="2"
-                        columnsS="1">
+<!--					<form:SimpleForm-->
+<!--						id="adr_form1"-->
+<!--						layout="ResponsiveGridLayout"-->
+<!--						minWidth="512"-->
+<!--						maxContainerCols="2"-->
+<!--                        labelSpanL="2"-->
+<!--                        labelSpanM="2"-->
+<!--                        labelSpanS="2"-->
+<!--                        emptySpanL="1"-->
+<!--                        emptySpanM="1"-->
+<!--                        emptySpanS="1"-->
+<!--                        columnsL="2"-->
+<!--                        columnsM="2"-->
+<!--                        columnsS="1"-->
+<!--                        class="editableForm"-->
+<!--                        editable="true">-->
                         
-                        
-                        <!--class="editableForm"-->
-                        <!--editable="true"-->
-						<core:Title id="title1" text="Kontaktperson" />
+<!--						<core:Title id="title1" text="Kontaktperson" />-->
 						
-						<Label id="adr_text0_label" text="Partner" />
-						<Text id="adr_text0" text="{Partner}" />
+<!--						<Label id="adr_text0_label" text="Partner" />-->
+<!--						<Text id="adr_text0" text="{Partner}" />-->
 						
-						<Label id="adr_text1_label" text="PartnerCp" />
-						<Text id="adr_text1" text="{PartnerCp}" />
+<!--						<Label id="adr_text1_label" text="PartnerCp" />-->
+<!--						<Text id="adr_text1" text="{PartnerCp}" />-->
 						
-						<core:ExtensionPoint name="extIconTabFilterForm1"/>
+<!--						<core:ExtensionPoint name="extIconTabFilterForm1"/>-->
 						
-					</form:SimpleForm>
-				</IconTabFilter>
+<!--					</form:SimpleForm>-->
+<!--				</IconTabFilter>-->
 				
-			</items>
-		</IconTabBar>
+<!--			</items>-->
+<!--		</IconTabBar>-->
 		
-		<core:ExtensionPoint name="extDetail"/>
+<!--		<core:ExtensionPoint name="extDetail"/>-->
 		
-		<footer id="detailsFooter">
-			<Bar id="bar">
-				<contentRight id="detailsContentRight">
-					<Button id="actionButton" icon="sap-icon://action" press="openActionSheet"></Button>
-				</contentRight>
-			</Bar>
-		</footer>
-	</Page>
-</mvc:View>
+<!--		<footer id="detailsFooter">-->
+<!--			<Bar id="bar">-->
+<!--				<contentRight id="detailsContentRight">-->
+<!--					<Button id="actionButton" icon="sap-icon://action" press="openActionSheet"></Button>-->
+<!--				</contentRight>-->
+<!--			</Bar>-->
+<!--		</footer>-->
+<!--	</Page>-->
+<!--</mvc:View>-->
