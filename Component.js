@@ -41,7 +41,13 @@ sap.ui.core.UIComponent.extend("ui5_pure_businesspartner_app.Component", {
 										pattern : "Detail/{contextPath}", // will be the url and from has to be provided in the data
 										view : "Detail",
 										name : "Detail" // name used for listening or navigating to this route
-									}]
+									},
+									{
+									    pattern : "ContactPerson_CRUD/{contextPath}",
+										view : "ContactPerson_CRUD",
+										name : "ContactPerson_CRUD"
+									}
+									]
 				}]
 		}
 	},

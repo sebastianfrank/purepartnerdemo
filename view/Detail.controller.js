@@ -514,6 +514,13 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 // 		    var cp_binding_context = bp_binding_context + '/' + 'ContactPersonSet';
 // 		    list.bindElement(cp_binding_context);
 // 		}
+	},
+	
+	handleSelect_Contact : function(oEvent) {
+		var oListItem = oEvent.getParameter("listItem") || oEvent.getSource();
+		
+		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
+		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD",{from: "Details", contextPath: oListItem.getBindingContext().getPath().substr(1)});
 	}
 
 });

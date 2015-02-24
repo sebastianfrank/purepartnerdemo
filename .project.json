@@ -4,6 +4,11 @@
       "templateId": "fioriexttemplate.starterApplication",
       "templateVersion": "1.4.0",
       "dateTimeStamp": "Tue, 20 Jan 2015 17:48:15 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Mon, 23 Feb 2015 18:24:56 GMT"
     }
   ],
   "mockpreview": {

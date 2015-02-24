@@ -326,7 +326,7 @@
 
 	        <List id="list_details" items="{ContactPersonSet}" mode="{device>/listMode}"
 		
-				select="handleSelect" growing="true" growingScrollToLoad="true"
+				select="handleSelect_Contact" growing="true" growingScrollToLoad="true"
 				delete="handleDelete">
 
 				 <items id="listItems_details">
