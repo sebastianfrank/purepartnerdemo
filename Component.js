@@ -102,7 +102,8 @@ sap.ui.core.UIComponent.extend("ui5_pure_businesspartner_app.Component", {
 		
 		
 		// set data model
-		var m = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true});
+		var m = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true}, "developer", "Pure$AWS5");
+// 		var oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, bJSON, sUser, sPwd);
 		this.setModel(m);
 		
 

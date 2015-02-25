@@ -26,17 +26,17 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 * This hook is the same one that SAPUI5 controls get after being rendered.
 * @memberOf view.ContactPerson_CRUD
 */
-//	onAfterRendering: function() {
-//
-//	},
+	onAfterRendering: function() {
+        var test = true;
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
 * @memberOf view.ContactPerson_CRUD
 */
-//	onExit: function() {
-//
-//	}
+	onExit: function() {
+        var test = true;
+	},
 
 	dateFromString : function(sDate) {
 		// Try to create date directly, otherwise assume dd/mm/yyyy
@@ -93,6 +93,20 @@ onInit : function() {
     
 		this.getView().setModel(new sap.ui.model.json.JSONModel(), "newContact");
 		this.initializenewContactData();
+	},
+	
+	onBeforeRendering: function() {
+// 		this.getView().getModel("newContact").setData({
+// 			ContactPerson: {
+// 				Partner: "",
+// 			    PartnerCp: "",
+// 			    Firstname: "",
+// 			    Lastname: "",
+// 			    Telephone: "",
+// 			    Email: "",
+// 			    ContactDate: "" 
+// 			}
+// 		});
 	},
 	
 createODataStatement: function(evt) {
@@ -202,17 +216,21 @@ saveProduct : function() {
 // 				this.showErrorAlert("Problem creating new product");
 // 			}, this)
 // 		});
+
+        var success;
 		
 	    this.getView().getModel().create('/ContactPersonSet', mPayload, null,
 	       function() { 
-	           this.navigateBack();
+	           success = true;
 	           //alert("Kontaktperson erfolgreich gespeichert");
 		}, function() {
 		       alert("Fehler beim Speichern der Kontaktperson");
 		});
 		
+		if (success) { 
+		    this.navigateBack();
+		}
 		
-
 	},
 	
 
@@ -255,7 +273,7 @@ saveProduct : function() {
 	onCancel : function(oEvent) {
 // 	    var oListItem = oEvent.getSource();
 // 		sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
-        window.history.go(-1);
+        this.navigateBack();
 	},
 	
     onDialogClose : function(oEvent) {
@@ -263,6 +281,18 @@ saveProduct : function() {
 	},
 	
 	navigateBack : function() {
+	    this.getView().getModel("newContact").setData({
+			ContactPerson: {
+				Partner: "",
+			    PartnerCp: "",
+			    Firstname: "",
+			    Lastname: "",
+			    Telephone: "",
+			    Email: "",
+			    ContactDate: "" 
+			}
+		});
+	    
 	    window.history.go(-1);
 	    
 // 		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
