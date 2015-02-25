@@ -262,7 +262,7 @@ saveProduct : function() {
 		oEvent.getSource().getParent().close();
 	},
 	
-	navigateBack : function(oEvent) {
+	navigateBack : function() {
 	    window.history.go(-1);
 	    
 // 		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
