@@ -487,6 +487,8 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 				}
 			},
 			legend: {
+			 //   position: { top: true },
+			    
 				title: {
 					visible: false
 				}
@@ -517,7 +519,14 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 	},
 	
 	handleSelect_Contact : function(oEvent) {
-		var oListItem = oEvent.getParameter("listItem") || oEvent.getSource();
+// 		var oListItem = oEvent.getParameter("listItem") || oEvent.getSource();
+		
+// 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
+// 		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD",{from: "Details", contextPath: oListItem.getBindingContext().getPath().substr(1)});
+	},
+	
+	handleCreateCP : function(oEvent) {
+		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
 		
 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
 		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD",{from: "Details", contextPath: oListItem.getBindingContext().getPath().substr(1)});

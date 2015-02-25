@@ -7,7 +7,7 @@ sap.ui.core.UIComponent.extend("ui5_pure_businesspartner_app.Component", {
 		"version" : "1.0",
 		"includes" : [],
 		"dependencies" : {
-			"libs" : ["sap.m", "sap.me", "sap.ushell"],
+			"libs" : ["sap.m", "sap.me", "sap.ushell", "sap.ui.core"],
 			"components" : []
 		},
 

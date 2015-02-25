@@ -332,14 +332,14 @@
 				 <items id="listItems_details">
 					<ObjectListItem id="mainListItem_details" type="{device>/listItemType}"
 					 title="{Firstname} {Lastname}"
-					 icon="{PartnerPicUrl}"
 					 number="{Telephone}"
 					 press="handleSelect_ContactPerson">
+                    <!--icon="{PartnerPicUrl}"-->
 
 						<attributes id="attributes">
 							
-								<ObjectAttribute id="Contact_Description" text="{Description}">
-								</ObjectAttribute>
+								<ObjectAttribute id="Contact_Email" text="{Email}" />
+								<ObjectAttribute id="Contact_Langu" text="{Langu}" />
 							
 						</attributes>
 					</ObjectListItem>
