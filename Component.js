@@ -46,6 +46,7 @@ sap.ui.core.UIComponent.extend("ui5_pure_businesspartner_app.Component", {
 									    pattern : "ContactPerson_CRUD/{contextPath}",
 										view : "ContactPerson_CRUD",
 										name : "ContactPerson_CRUD"
+										
 									}
 									]
 				}]

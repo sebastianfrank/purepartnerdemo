@@ -55,7 +55,6 @@
                         columnsM="2"
                         columnsS="1">
                         
-                        
                         <!--class="editableForm"-->
                         <!--editable="true"-->
 						<core:Title id="title1" text="Adresse" />

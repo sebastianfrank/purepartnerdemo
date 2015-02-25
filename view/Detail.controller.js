@@ -20,7 +20,6 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 		this.initStackedColumn();
 		
-		
 	},
 	
 	onBeforeRendering: function() {

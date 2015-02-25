@@ -46,9 +46,13 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	},
 
 initializenewContactData : function() {
+
+        var modelBP = this.getView().getModel();
+// 		var currentBP = modelBP.getData().Partner;
+    
 		this.getView().getModel("newContact").setData({
 			ContactPerson: {
-				
+				// Partner: currentBP
 			}
 		});
 	},
@@ -76,6 +80,17 @@ initializenewContactData : function() {
             // </EntityType>
 
 onInit : function() {
+        var view = this.getView();
+
+// 		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
+// 			// when detail navigation occurs, update the binding context
+// 			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
+// 				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
+// 				view.setBindingContext(context);
+// 				// Make sure the master is here
+// 			}
+// 		}, this);
+    
 		this.getView().setModel(new sap.ui.model.json.JSONModel(), "newContact");
 		this.initializenewContactData();
 	},
@@ -108,7 +123,7 @@ createODataStatement: function(evt) {
 		oEntry.ContactDate = "20150101";
 		
 		this.getView().getModel().create('/ContactPersonSet', oEntry, null, function() {
-			alert("Create ContactPerson successful");
+// 			alert("Create ContactPerson successful");
 		}, function() {
 			alert("Create ContactPerson failed");
 		});
@@ -128,6 +143,7 @@ createODataStatement: function(evt) {
 	
 saveProduct : function() {
 		var mnewContact = this.getView().getModel("newContact").getData().ContactPerson;
+// 		var currentBP = this.getView().getModel("BusinessPartner").getData().Partner;
 // 		<Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
             //     <Property Name="PartnerCp" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
             //     <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Vorname" sap:sortable="false" sap:filterable="false"/>
@@ -143,6 +159,7 @@ saveProduct : function() {
 		// Basic payload data
 		var mPayload = {
 			Partner: mnewContact.Partner,
+// 			Partner: currentBP,
 			PartnerCp: mnewContact.PartnerCp,
 			Firstname: mnewContact.Firstname,
 			Lastname: mnewContact.Lastname,
@@ -187,8 +204,11 @@ saveProduct : function() {
 // 		});
 		
 	    this.getView().getModel().create('/ContactPersonSet', mPayload, null,
-	       function() { alert("Kontaktperson erfolgreich gespeichert");
-		}, function() { alert("Fehler beim Speichern der Kontaktperson");
+	       function() { 
+	           this.navigateBack();
+	           //alert("Kontaktperson erfolgreich gespeichert");
+		}, function() {
+		       alert("Fehler beim Speichern der Kontaktperson");
 		});
 		
 		
@@ -198,7 +218,7 @@ saveProduct : function() {
 
 	onSave : function(oEvent) {
 	    this.saveProduct();
-	    this.navigateBack(oEvent);
+	    
 	    
 // 		// Show message if no product name has been entered
 // 		// Otherwise, get highest existing ID, and invoke create for new product
@@ -233,8 +253,9 @@ saveProduct : function() {
 	},
 	
 	onCancel : function(oEvent) {
-	    var oListItem = oEvent.getSource();
-		sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
+// 	    var oListItem = oEvent.getSource();
+// 		sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
+        window.history.go(-1);
 	},
 	
     onDialogClose : function(oEvent) {
@@ -242,11 +263,13 @@ saveProduct : function() {
 	},
 	
 	navigateBack : function(oEvent) {
-		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
+	    window.history.go(-1);
+	    
+// 		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
 		
-		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
-// 		sap.ui.core.UIComponent.getRouterFor(this).navTo("Details",{from: "ContactPerson_CRUD", contextPath: oListItem.getBindingContext().getPath().substr(1)});
-        sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
+// 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
+// // 		sap.ui.core.UIComponent.getRouterFor(this).navTo("Details",{from: "ContactPerson_CRUD", contextPath: oListItem.getBindingContext().getPath().substr(1)});
+//         sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
 	}
 	
 });
