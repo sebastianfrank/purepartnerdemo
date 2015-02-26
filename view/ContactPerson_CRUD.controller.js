@@ -179,7 +179,8 @@ saveProduct : function() {
 			Lastname: mnewContact.Lastname,
 			Telephone: mnewContact.Telephone,
 			Email: mnewContact.Email,
-			ContactDate: this.dateFromString(mnewContact.ContactDate)
+			ContactDate: this.dateFromString("2015/02/26") //test = new Date("2015/02/26")
+// 			ContactDate: this.dateFromString(mnewContact.ContactDate)
 		};
 
 // 		if (mnewContact.DiscontinuedDate) {
