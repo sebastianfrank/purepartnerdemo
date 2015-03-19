@@ -1,5 +1,5 @@
 sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Master", {
-	
+	 
 	handleSearch: function() {
 		// add filter for search
 		var filters = [];
