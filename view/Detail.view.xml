@@ -85,37 +85,13 @@
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData6" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
-						</Text>
-						
-						<core:ExtensionPoint name="extIconTabFilterForm1"/>
-						
-					</form:SimpleForm>
-				</IconTabFilter>
-						
-				<IconTabFilter id="iconTabFilter2" icon="sap-icon://discussion">
-					
-					<form:SimpleForm
-						id="contact_form2"
-						layout="ResponsiveGridLayout"
-						minWidth="512"
-						maxContainerCols="2"
-                        labelSpanL="2"
-                        labelSpanM="2"
-                        labelSpanS="2"
-                        emptySpanL="0"
-                        emptySpanM="0"
-                        emptySpanS="0"
-                        columnsL="2"
-                        columnsM="2"
-                        columnsS="1"> 
-
-						<core:Title id="title2" text="Kontakt" />
+						</Text> 
 						
 						<Label id="label3" text="Telefon">
 							<customData id="customData9">
 								<core:CustomData id="coreCustomData9" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
-						</Label>
+						</Label>  
 						
 						<Text id="text3" text="{Telephone}" >
 							<customData id="customData10">
@@ -135,10 +111,58 @@
 						<Label id="contact_language_label" text="Sprache" />
 						<Text id="contact_language_text" text="{Langu}" />
 						
-						<core:ExtensionPoint name="extIconTabFilterForm2"/>
+						<core:ExtensionPoint name="extIconTabFilterForm1"/>
 						
 					</form:SimpleForm>
 				</IconTabFilter>
+						
+				<!--<IconTabFilter id="iconTabFilter2" icon="sap-icon://discussion">-->
+					
+				<!--	<form:SimpleForm-->
+				<!--		id="contact_form2"-->
+				<!--		layout="ResponsiveGridLayout"-->
+				<!--		minWidth="512"-->
+				<!--		maxContainerCols="2"-->
+    <!--                    labelSpanL="2"-->
+    <!--                    labelSpanM="2"-->
+    <!--                    labelSpanS="2"-->
+    <!--                    emptySpanL="0"-->
+    <!--                    emptySpanM="0"-->
+    <!--                    emptySpanS="0"-->
+    <!--                    columnsL="2"-->
+    <!--                    columnsM="2"-->
+    <!--                    columnsS="1"> -->
+
+				<!--		<core:Title id="title2" text="Kontakt" />-->
+						
+				<!--		<Label id="label3" text="Telefon">-->
+				<!--			<customData id="customData9">-->
+				<!--				<core:CustomData id="coreCustomData9" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>-->
+				<!--			</customData>-->
+				<!--		</Label>-->
+						
+				<!--		<Text id="text3" text="{Telephone}" >-->
+				<!--			<customData id="customData10">-->
+				<!--				<core:CustomData id="coreCustomData10" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>-->
+				<!--			</customData>-->
+				<!--		</Text>-->
+						
+				<!--		<Label id="contact_mobile_label" text="Mobil" />-->
+				<!--		<Text id="contact_mobile_text" text="{Mobile}" />-->
+						
+				<!--		<Label id="contact_email_label" text="Email" />-->
+				<!--		<Text id="contact_email_text" text="{Email}" />-->
+						
+				<!--		<Label id="contact_url_label" text="www" />-->
+				<!--		<Text id="contact_url_text" text="{Url}" />-->
+						
+				<!--		<Label id="contact_language_label" text="Sprache" />-->
+				<!--		<Text id="contact_language_text" text="{Langu}" />-->
+						
+				<!--		<core:ExtensionPoint name="extIconTabFilterForm2"/>-->
+						
+				<!--	</form:SimpleForm>-->
+				<!--</IconTabFilter>-->
 				
 				
 				<!-- W5L: Chart -->

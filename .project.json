@@ -12,9 +12,11 @@
     }
   ],
   "mockpreview": {
-    "mockUri": "/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV",
+    "mockUri": "/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV/",
     "loadJSONFiles": true,
-    "loadCustomRequests": false
+    "loadCustomRequests": false,
+    "metadataFilePath": "",
+    "mockRequestsFilePath": ""
   },
   "translation": {
     "translationDomain": "",
