@@ -9,7 +9,7 @@
 	xmlns:vizd="sap.viz.ui5.data"
 	xmlns:layout="sap.ui.layout"
 	xmlns:ui="sap.ca.ui"
-	xmlns:commons="sap.suite.ui.commons">
+	xmlns:commons="sap.suite.ui.commons"> 
 	<Page 
 		id="detailsPage"
 		title="{i18n>DETAIL_TITLE}"
