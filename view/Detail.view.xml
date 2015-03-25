@@ -95,6 +95,7 @@
 						<!--	</customData>-->
 						<!--</Text>-->
 						
+						
 						<Label id="contact_mobile_label" textAlign="Left" textDirection="LTR"  text="Mobil" />
 						<!--<Text id="contact_mobile_text" text="{Mobile}" />-->
 						<Link id="link2_adr_mobile" text="{Mobile}" href="Tel: {Mobile}" />
