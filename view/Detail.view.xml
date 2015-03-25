@@ -168,7 +168,7 @@
 			        <Text text="Chart" class="sapMH3FontSize"/>
 			        <ToolbarSpacer/>
 			    </Toolbar>
-				
+				  
 					 <!--<form:SimpleForm id="formChart" layout="GridLayout"-->
 			   <!--         minWidth="1024"-->
 				  <!--      maxContainerCols="1"-->
