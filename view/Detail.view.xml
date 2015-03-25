@@ -40,76 +40,72 @@
 			<items id="detailsItems">
 				<IconTabFilter id="iconTabFilter1"
 					icon="sap-icon://hint">
+					
+
+					
 					<form:SimpleForm
 						id="adr_form1"
 						layout="ResponsiveGridLayout"
-						minWidth="512"
-						maxContainerCols="2"
-                        labelSpanL="2"
-                        labelSpanM="2"
-                        labelSpanS="2"
-                        emptySpanL="1"
-                        emptySpanM="1"
-                        emptySpanS="1"
-                        columnsL="2"
-                        columnsM="2"
-                        columnsS="1">
-                        
-                        <!--class="editableForm"-->
-                        <!--editable="true"-->
-						<core:Title id="title1" text="Adresse" />
-						
-						<Label id="adr_text0_label" text="Name" />
+						minLabelWidth="0"
+						maxContainerCols="1">
+
+                        <core:Title id="Title_adr_1" text="Kontaktinformationen" />
+
+						<Label id="adr_text0_label" text="Name" textAlign="Left" textDirection="LTR"  />
 						<Text id="adr_text0" text="{Name}" >
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData3" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text>
-						
-						<Label id="adr_text1_label" text="Strasse" />
+				
+						<Label id="adr_text1_label" textAlign="Left" textDirection="LTR" text="Strasse" />
 						<Text id="adr_text1" text="{Street} {HouseNo}" >
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData4" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text>
 						
-						<Label id="adr_text2_label" text="Stadt" />
+						<Label id="adr_text2_label" textAlign="Left" textDirection="LTR" text="Stadt" />
 						<Text id="adr_text2" text="{PostlCod1} {City}" >
 							<customData id="customData4">
 								<core:CustomData id="adr_coreCustomData5" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text>
 					    
-					    <Label id="adr_text3_label" text="Land" />
+					    <Label id="adr_text3_label" textAlign="Left" textDirection="LTR" text="Land" />
                         <Text id="adr_text3" text="{Country}" >
 							<customData id="customData7">
 								<core:CustomData id="adr_coreCustomData6" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Text> 
 						
-						<Label id="label3" text="Telefon">
+						<Label id="contact_language_label" textAlign="Left" textDirection="LTR" text="Sprache" />
+						<Text id="contact_language_text" text="{Langu}" />
+						
+						<Label id="label3" textAlign="Left" textDirection="LTR" text="Telefon">
 							<customData id="customData9">
 								<core:CustomData id="coreCustomData9" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
 							</customData>
 						</Label>  
 						
-						<Text id="text3" text="{Telephone}" >
-							<customData id="customData10">
-								<core:CustomData id="coreCustomData10" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
-							</customData>
-						</Text>
+						<Link id="link1_adr_telephone" text="{Telephone}" href="Tel: {Telephone}" />
+						<!--<Text id="text3" textAlign="Left" textDirection="LTR" text="{Telephone}" >-->
+						<!--	<customData id="customData10">-->
+						<!--		<core:CustomData id="coreCustomData10" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>-->
+						<!--	</customData>-->
+						<!--</Text>-->
 						
-						<Label id="contact_mobile_label" text="Mobil" />
-						<Text id="contact_mobile_text" text="{Mobile}" />
+						<Label id="contact_mobile_label" textAlign="Left" textDirection="LTR"  text="Mobil" />
+						<!--<Text id="contact_mobile_text" text="{Mobile}" />-->
+						<Link id="link2_adr_mobile" text="{Mobile}" href="Tel: {Mobile}" />
 						
-						<Label id="contact_email_label" text="Email" />
-						<Text id="contact_email_text" text="{Email}" />
+						<Label id="contact_email_label" textAlign="Left" textDirection="LTR" text="Email" />
+						<Link id="link3_adr_email" text="{Email}" href="mailto: {Email}" />
+						<!--<Text id="contact_email_text" text="{Email}" />-->
 						
-						<Label id="contact_url_label" text="www" />
-						<Text id="contact_url_text" text="{Url}" />
-						
-						<Label id="contact_language_label" text="Sprache" />
-						<Text id="contact_language_text" text="{Langu}" />
+						<Label id="contact_url_label" textAlign="Left" textDirection="LTR"  text="www" />
+						<!--<Text id="contact_url_text" text="{Url}" />-->
+						<Link id="link2_adr_url" text="{Url}" href="{Url}" target="_blank" />
 						
 						<core:ExtensionPoint name="extIconTabFilterForm1"/>
 						
