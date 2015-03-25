@@ -79,6 +79,8 @@
 							</customData>
 						</Text> 
 						
+						<!--<Link id="link1_adr_map" text="Karte anzeigen" href="geo:{PostlCod1} {City} {Street} {HouseNo}" />-->
+						
 						<Label id="contact_language_label" textAlign="Left" textDirection="LTR" text="Sprache" />
 						<Text id="contact_language_text" text="{Langu}" />
 						
