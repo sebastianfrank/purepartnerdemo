@@ -70,8 +70,8 @@
 						<Label text="Partner ID" />
 						<Input value="{newContact>/ContactPerson/Partner}" />
 						
-						<Label text="Kontaktperson ID" />
-						<Input value="{newContact>/ContactPerson/PartnerCp}" />
+						<!--<Label text="Kontaktperson ID" />-->
+						<!--<Input value="{newContact>/ContactPerson/PartnerCp}" />-->
 						
 						<Label text="Vorname" />
 						<Input value="{newContact>/ContactPerson/Firstname}" />
