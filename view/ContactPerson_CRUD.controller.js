@@ -46,15 +46,23 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	},
 
 initializenewContactData : function() {
-
-        var modelBP = this.getView().getModel();
+        debugger;
+        
+        var bindingContext = this.getView().getBindingContext();
+        var path = bindingContext.getPath();
+        var object = bindingContext.getModel().getProperty(path);      
+        var currentPartner = bindingContext.getProperty("Partner");
+        
+        // var modelBP = this.getView().getModel();
 // 		var currentBP = modelBP.getData().Partner;
-    
-		this.getView().getModel("newContact").setData({
-			ContactPerson: {
-				// Partner: currentBP
-			}
-		});
+        
+//        var bp = this.getView().getModel("Partner");
+        
+// 		this.getView().getModel("newContact").setData({
+// 			ContactPerson: {
+// 				Partner: currentBP
+// 			}
+// 		});
 	},
 
             // <EntityType Name="ContactPerson" sap:content-version="1">
@@ -82,14 +90,14 @@ initializenewContactData : function() {
 onInit : function() {
         var view = this.getView();
 
-// 		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
-// 			// when detail navigation occurs, update the binding context
-// 			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
-// 				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
-// 				view.setBindingContext(context);
-// 				// Make sure the master is here
-// 			}
-// 		}, this);
+		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
+			// when detail navigation occurs, update the binding context
+			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
+				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
+				view.setBindingContext(context);
+				// Make sure the master is here
+			}
+		}, this);
     
 		this.getView().setModel(new sap.ui.model.json.JSONModel(), "newContact");
 		this.initializenewContactData();
