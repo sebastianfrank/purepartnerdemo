@@ -22,7 +22,7 @@
 	
 	<Page
 		class="sapUiFioriObjectPage"
-		title="Kontaktperson hinzufügen">
+		title="Ansprechpartner hinzufügen">
 		<l:Grid
 			defaultSpan="L12 M12 S12"
 			width="auto">
@@ -33,7 +33,7 @@
 					maxContainerCols="2"
 					editable="true"
 					layout="ResponsiveGridLayout"
-					title="Neue Kontaktperson"
+					title="Neuer Ansprechpartner"
 					labelSpanL="3"
 					labelSpanM="3"
 					emptySpanL="4"

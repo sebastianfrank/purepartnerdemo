@@ -203,7 +203,7 @@
 		<!--<subHeader id="subHeader_Contact">-->
 		<!--<headerToolbar>-->
 			<Toolbar id="bar1_contact">
-			        <Text text="Kontaktpersonen" class="sapMH3FontSize"/>
+			        <Text text="Ansprechpartner" class="sapMH3FontSize"/>
 			        <ToolbarSpacer/>
 				    <Button
                         icon="sap-icon://add-contact"
