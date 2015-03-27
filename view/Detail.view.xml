@@ -209,7 +209,7 @@
                         icon="sap-icon://add-contact"
                         press="handleCreateCP" />
 			</Toolbar>
-		<!--</headerToolbar>-->
+		<!--</headerToolbar>--> 
 		<!--</subHeader>-->
 				
 					<form:SimpleForm id="formOverview" layout="ResponsiveGridLayout"

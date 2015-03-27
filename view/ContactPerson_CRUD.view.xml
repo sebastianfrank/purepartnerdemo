@@ -40,7 +40,7 @@
 					emptySpanM="4"
 					columnsL="1"
 					columnsM="1"
-					class="editableForm">
+					class="editableForm"> 
 					<f:content>
             <!--// <EntityType Name="ContactPerson" sap:content-version="1">-->
             <!--//     <Key>-->
