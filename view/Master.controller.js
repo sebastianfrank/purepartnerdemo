@@ -14,7 +14,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Master", {
 		binding.filter(filters);
 	},
 	
-	handleSelect: function(oEvent) {
+	handleSelect: function(oEvent) { 
 		var oListItem = oEvent.getParameter("listItem") || oEvent.getSource();
 		
 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
