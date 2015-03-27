@@ -2,7 +2,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
  
 	onInit: function() {
 		this.initData();
-
+ 
 		var view = this.getView();
 
 		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
