@@ -20,7 +20,7 @@
 <!--<mvc:View-->
 <!--	controllerName="sap.ui.demo.tdg.view.AddProduct"-->
 	 
-	<Page
+	<Page 
 		class="sapUiFioriObjectPage"
 		title="Ansprechpartner hinzufügen">
 		<l:Grid

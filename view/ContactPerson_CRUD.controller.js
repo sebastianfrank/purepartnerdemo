@@ -2,7 +2,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
     
     oAlertDialog : null,
 	oBusyDialog : null,
-
+ 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.

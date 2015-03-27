@@ -220,7 +220,7 @@
                         labelSpanS="1"
                         emptySpanL="0"
                         emptySpanM="0"
-                        emptySpanS="0"
+                        emptySpanS="0" 
                         columnsL="1"
                         columnsM="1"
                         columnsS="1">
