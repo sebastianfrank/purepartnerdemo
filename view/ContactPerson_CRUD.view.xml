@@ -28,7 +28,7 @@
 			width="auto">
 			<l:content>
 				<f:SimpleForm
-					id="idAddProductForm"
+					id="idAddProductForm" 
 					minWidth="800"
 					maxContainerCols="2"
 					editable="true"

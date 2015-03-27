@@ -27,7 +27,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 * @memberOf view.ContactPerson_CRUD
 */
 	onAfterRendering: function() {
-        var test = true;
+        var test = true; 
 	},
 
 /**
