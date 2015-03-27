@@ -19,15 +19,15 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		this.handleOverviewTile();
 
 		this.initStackedColumn();
-		
+
 	},
-	
+
 	onBeforeRendering: function() {
 
 	},
-	
+
 	onAfterRendering: function() {
-	    this.initContactTable();
+		this.initContactTable();
 	},
 
 	openActionSheet: function() {
@@ -228,8 +228,8 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 	handleStackedColumnChart: function() {
 
-// 		var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
-// 		var oPopOver = this.getView().byId("idPopOver");
+		// 		var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
+		// 		var oPopOver = this.getView().byId("idPopOver");
 		// 		var oModelProducts = new sap.ui.model.json.JSONModel("./resources/products.json");
 		// 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 		// 			dimensions : [ {
@@ -298,7 +298,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 			alert("Contact tapped");
 		}, 300);
 	},
-	
+
 	onAddContact: function(evt) {
 		setTimeout(function() {
 			alert("Kontakt hinzufügen angeklickt");
@@ -316,38 +316,36 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 	},
 
 	createODataStatement: function(evt) {
-// 		var oEntry = {};
-// 		oEntry.Company = "Added Company";
-// 		oEntry.CreatedBy = " Yuto Murase";
-// 		oEntry.Address = "Home";
-// 		oEntry.Opportunities = "4.2 Mio Euro";
-// 		oEntry.revenuToDate = "2.1 Mio Euro ";
-// 		oEntry.Rating = "Silver";
-// 		oEntry.LastContact = "May 5, 2013";
-// 		oEntry.NextContact = "October 12, 2013";
+		// 		var oEntry = {};
+		// 		oEntry.Company = "Added Company";
+		// 		oEntry.CreatedBy = " Yuto Murase";
+		// 		oEntry.Address = "Home";
+		// 		oEntry.Opportunities = "4.2 Mio Euro";
+		// 		oEntry.revenuToDate = "2.1 Mio Euro ";
+		// 		oEntry.Rating = "Silver";
+		// 		oEntry.LastContact = "May 5, 2013";
+		// 		oEntry.NextContact = "October 12, 2013";
 
-// 		oModelCompanies.create('/WorkItems', oEntry, null, function() {
-// 			alert("Create successful");
-// 		}, function() {
-// 			alert("Create failed");
-// 		});
-		
-		
+		// 		oModelCompanies.create('/WorkItems', oEntry, null, function() {
+		// 			alert("Create successful");
+		// 		}, function() {
+		// 			alert("Create failed");
+		// 		});
+
 		// -----
-		
+
 		var oEntry = {};
 		oEntry.Partner = "3000";
 		oEntry.PartnerCp = "3333";
 		oEntry.Firstname = "Yuto";
 		oEntry.Lastname = "Moro";
 		oEntry.ContactDate = "20150101";
-		
+
 		this.getView().getModel().create('/ContactPersonSet', oEntry, null, function() {
 			alert("Create ContactPerson successful");
 		}, function() {
 			alert("Create ContactPerson failed");
 		});
-		
 
 		//				    	{
 		//                            "Company": "Farnborough Aircraft Interiors Ltd ",
@@ -438,7 +436,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 		var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
 		var oPopOver = this.getView().byId("idPopOver");
-// 		var oModel = new sap.ui.model.json.JSONModel("test-resources/sap/viz/demokit/dataset/bookstore_fiori/ByYearCity_sum.json");
+		// 		var oModel = new sap.ui.model.json.JSONModel("test-resources/sap/viz/demokit/dataset/bookstore_fiori/ByYearCity_sum.json");
 		var oModel = new sap.ui.model.json.JSONModel("pure_resources/Lohnsumme_Agentur_Jahr.json");
 		var oDataset = new sap.viz.ui5.data.FlattenedDataset({
 
@@ -478,7 +476,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 				'type': "Dimension",
 				'values': ["Betriebsteil"]
 			});
-			
+
 		oVizFrame.setVizProperties({
 			valueAxis: {
 				label: {
@@ -486,8 +484,8 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 				}
 			},
 			legend: {
-			 //   position: { top: true },
-			    
+				//   position: { top: true },
+
 				title: {
 					visible: false
 				}
@@ -503,32 +501,35 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		oVizFrame.addFeed(feedColor);
 		oPopOver.connect(oVizFrame.getVizUid());
 	},
-	
+
 	initContactTable: function(oEvent) {
 
-//         var view = this.getView();
-// 		var list = view.byId("list_details");
-// 		var page = view.byId("detailsPage");
-// 		var bp_binding_context = page.getBindingContext();
-// 		if ( bp_binding_context ) {
-// 		    bp_binding_context.getPath().substr(1); //BusinessPartnerSet('3000')
-// 		    var cp_binding_context = bp_binding_context + '/' + 'ContactPersonSet';
-// 		    list.bindElement(cp_binding_context);
-// 		}
+		//         var view = this.getView();
+		// 		var list = view.byId("list_details");
+		// 		var page = view.byId("detailsPage");
+		// 		var bp_binding_context = page.getBindingContext();
+		// 		if ( bp_binding_context ) {
+		// 		    bp_binding_context.getPath().substr(1); //BusinessPartnerSet('3000')
+		// 		    var cp_binding_context = bp_binding_context + '/' + 'ContactPersonSet';
+		// 		    list.bindElement(cp_binding_context);
+		// 		}
 	},
-	
-	handleSelect_Contact : function(oEvent) {
-// 		var oListItem = oEvent.getParameter("listItem") || oEvent.getSource();
-		
-// 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
-// 		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD",{from: "Details", contextPath: oListItem.getBindingContext().getPath().substr(1)});
+
+	handleSelect_Contact: function(oEvent) {
+		// 		var oListItem = oEvent.getParameter("listItem") || oEvent.getSource();
+
+		// 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
+		// 		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD",{from: "Details", contextPath: oListItem.getBindingContext().getPath().substr(1)});
 	},
-	
-	handleCreateCP : function(oEvent) {
+
+	handleCreateCP: function(oEvent) {
 		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
-		
+
 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
-		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD",{from: "Details", contextPath: oListItem.getBindingContext().getPath().substr(1)});
+		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD", {
+			from: "Details",
+			contextPath: oListItem.getBindingContext().getPath().substr(1)
+		});
 	}
 
 });
