@@ -21,7 +21,7 @@
 			 title="{Name}"
 			 number="{Bpext}"
 			 numberUnit="{Partner}">
-			
+			 
 			<customData id="customData1">
                 <core:CustomData id="coreCustomData1" key="sapDtResourcePath" value="BusinessPartnerSet"></core:CustomData>
             </customData>
