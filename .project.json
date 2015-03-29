@@ -15,7 +15,7 @@
     "mockUri": "/sap/opu/odata/sap/ZUI5_PURE_BUSINESS_PARTNER_SRV/",
     "loadJSONFiles": true,
     "loadCustomRequests": false,
-    "metadataFilePath": "",
+    "metadataFilePath": "model/metadata.xml",
     "mockRequestsFilePath": ""
   },
   "translation": {

@@ -46,7 +46,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	},
 
 initializenewContactData : function() {
-        debugger;
+//        debugger;
         
         var bindingContext = this.getView().getBindingContext();
         var path = bindingContext.getPath();
