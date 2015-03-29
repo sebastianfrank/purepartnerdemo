@@ -1,0 +1,43 @@
+<core:View
+	controllerName="ui5_pure_businesspartner_app.view.Detail_Chart" 
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m" 
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz5="sap.viz.ui5"
+	xmlns:vizd="sap.viz.ui5.data"
+	xmlns:layout="sap.ui.layout"
+	xmlns:ui="sap.ca.ui"
+	xmlns:commons="sap.suite.ui.commons">
+	
+				<Toolbar id="bar1_chart">
+			        <Text text="Chart" class="sapMH3FontSize"/>
+			        <ToolbarSpacer/>
+			    </Toolbar>
+				  
+					 <!--<form:SimpleForm id="formChart" layout="GridLayout"-->
+			   <!--         minWidth="1024"-->
+				  <!--      maxContainerCols="1"-->
+      <!--                  labelSpanL="1"-->
+      <!--                  labelSpanM="1"-->
+      <!--                  labelSpanS="1"-->
+      <!--                  emptySpanL="0"-->
+      <!--                  emptySpanM="0"-->
+      <!--                  emptySpanS="0"-->
+      <!--                  columnsL="1"-->
+      <!--                  columnsM="1"-->
+      <!--                  columnsS="1">-->
+                        
+					 <!--<core:Title id="titleChart" text="Chart" /> -->
+
+					<viz:VizFrame id="idVizFrameStackedColumn" uiConfig="{applicationSet:'fiori'}"
+						vizType="stacked_column">
+						<!--width="900px" height="700px">-->
+					</viz:VizFrame>
+					<viz:Popover id="idPopOver"></viz:Popover>
+
+					<core:ExtensionPoint name="extIconTabFilterFormChart" />
+					
+</core:View>

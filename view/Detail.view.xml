@@ -117,14 +117,13 @@
 				</IconTabFilter>
 						 
 
-				
-				
 				<!-- W5L: Chart -->
-				<IconTabFilter id="iconTabFilterChart" icon="sap-icon://vertical-stacked-chart" >
+<!--				<IconTabFilter id="iconTabFilterChart" icon="sap-icon://vertical-stacked-chart" >
 				<Toolbar id="bar1_chart">
 			        <Text text="Chart" class="sapMH3FontSize"/>
 			        <ToolbarSpacer/>
 			    </Toolbar>
+-->
 				  
 					 <!--<form:SimpleForm id="formChart" layout="GridLayout"-->
 			   <!--         minWidth="1024"-->
@@ -141,16 +140,25 @@
                         
 					 <!--<core:Title id="titleChart" text="Chart" /> -->
 
+<!--
 					<viz:VizFrame id="idVizFrameStackedColumn" uiConfig="{applicationSet:'fiori'}"
 						vizType="stacked_column">
-						<!--width="900px" height="700px">-->
 					</viz:VizFrame>
 					<viz:Popover id="idPopOver"></viz:Popover>
 
 					<core:ExtensionPoint name="extIconTabFilterFormChart" />
 
-					 <!--</form:SimpleForm> -->
 				</IconTabFilter>
+-->
+				
+				<IconTabFilter
+				  key="chart1"
+				  id="iconTabFilterChart1"
+				  icon="sap-icon://vertical-stacked-chart">
+				  
+				  <mvc:XMLView viewName="ui5_pure_businesspartner_app.view.Detail_Chart"></mvc:XMLView>
+				</IconTabFilter>
+
 
 				<!-- W5L: Overview tile -->
 				<IconTabFilter id="iconTabFilterOverview" icon="sap-icon://personnel-view">

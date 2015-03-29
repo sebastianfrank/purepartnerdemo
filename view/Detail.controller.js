@@ -18,7 +18,9 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 // 		this.handleOverviewTile();
 
-		this.initStackedColumn();
+//      sap.ui.localResources("");
+
+ 	  //  this.initStackedColumn();
 
 	},
 
@@ -96,7 +98,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		sap.m.MessageToast.show("The facet overview is pressed.");
 	},
 
-	initStackedColumn: function(oEvent) {
+/*	initStackedColumn: function(oEvent) {
 
 		var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
 		var oPopOver = this.getView().byId("idPopOver");
@@ -164,7 +166,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		oVizFrame.addFeed(feedAxisLabels);
 		oVizFrame.addFeed(feedColor);
 		oPopOver.connect(oVizFrame.getVizUid());
-	},
+	},*/
 
 	initContactTable: function(oEvent) {
 
