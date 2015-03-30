@@ -8,18 +8,41 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 	 * @memberOf view.ContactPerson_CRUD
 	 */
-	//	onInit: function() {
-	//
-	//	},
+	onInit: function() {
+		debugger;
+		var view = this.getView();
+
+		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
+			// when detail navigation occurs, update the binding context
+			debugger;
+			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
+				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
+				view.setBindingContext(context);
+				// Make sure the master is here
+				view.setModel(new sap.ui.model.json.JSONModel(), "newContact");
+				this.initializeNewContactData();
+			}
+		}, this);
+	},
 
 	/**
 	 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 	 * (NOT before the first rendering! onInit() is used for that one!).
 	 * @memberOf view.ContactPerson_CRUD
 	 */
-	//	onBeforeRendering: function() {
-	//
-	//	},
+	onBeforeRendering: function() {
+		// 		this.getView().getModel("newContact").setData({
+		// 			ContactPerson: {
+		// 				Partner: "",
+		// 			    PartnerCp: "",
+		// 			    Firstname: "",
+		// 			    Lastname: "",
+		// 			    Telephone: "",
+		// 			    Email: "",
+		// 			    ContactDate: "" 
+		// 			}
+		// 		});
+	},
 
 	/**
 	 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
@@ -45,10 +68,10 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 
 	},
 
-	initializeNewContactData: function(bindingContext) {
+	initializeNewContactData: function() {
 		//        debugger;
 
-		// var bindingContext = this.getView().getBindingContext();
+		var bindingContext = this.getView().getBindingContext();
 		var path = bindingContext.getPath();
 		var object = bindingContext.getModel().getProperty(path);
 		var currentPartner = bindingContext.getProperty("Partner");
@@ -87,42 +110,8 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	//     <NavigationProperty Name="BusinessPartner" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="ToRole_zui5_bp_to_cp_association" ToRole="FromRole_zui5_bp_to_cp_association"/>
 	// </EntityType>
 
-	onInit: function() {
-		// debugger;
-		var view = this.getView();
-
-		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
-			// when detail navigation occurs, update the binding context
-// 			debugger;
-			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
-				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
-				view.setBindingContext(context);
-				// Make sure the master is here
-			}
-		}, this);
-
-		var bindingContext = this.getView().getBindingContext();
-		if (bindingContext) {
-			view.setModel(new sap.ui.model.json.JSONModel(), "newContact");
-			this.initializeNewContactData(bindingContext);
-		}
-	},
-
-	onBeforeRendering: function() {
-		// 		this.getView().getModel("newContact").setData({
-		// 			ContactPerson: {
-		// 				Partner: "",
-		// 			    PartnerCp: "",
-		// 			    Firstname: "",
-		// 			    Lastname: "",
-		// 			    Telephone: "",
-		// 			    Email: "",
-		// 			    ContactDate: "" 
-		// 			}
-		// 		});
-	},
-
 	savePartner: function() {
+		debugger;
 		var mnewContact = this.getView().getModel("newContact").getData().ContactPerson;
 		// 		var currentBP = this.getView().getModel("BusinessPartner").getData().Partner;
 		// 		<Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
@@ -197,6 +186,9 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 				}, function() {
 					alert("Fehler beim Speichern der Kontaktperson");
 				});
+		}
+		else {
+		    alert("Keine Daten zum Speichern vorhanden");
 		}
 
 		if (success) {
