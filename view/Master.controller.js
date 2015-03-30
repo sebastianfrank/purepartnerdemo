@@ -58,12 +58,12 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Master", {
 	},
 
 	handleCreateBP: function(evt) {
-		jQuery.sap.require("sap.m.MessageToast");
-		sap.m.MessageToast.show("create toolbar button pressed");
+// 		jQuery.sap.require("sap.m.MessageToast");
+// 		sap.m.MessageToast.show("create toolbar button pressed");
 	},
 
 	handleDeleteBP: function(oEvent) {
-		jQuery.sap.require("sap.m.MessageToast");
-		sap.m.MessageToast.show("delete toolbar button pressed");
+// 		jQuery.sap.require("sap.m.MessageToast");
+// 		sap.m.MessageToast.show("delete toolbar button pressed");
 	}
 });
