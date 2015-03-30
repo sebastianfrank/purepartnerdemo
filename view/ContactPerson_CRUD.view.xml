@@ -67,8 +67,8 @@
 						<!-- Basic info -->
 						<!--<c:Title text="Neue Kontaktperson anlegen" />-->
 						
-						<Label text="Partner ID" />
-						<Input value="{newContact>/ContactPerson/Partner}" />
+						<!--<Label text="Partner ID" />-->
+						<!--<Input value="{newContact>/ContactPerson/Partner}" />-->
 						
 						<!--<Label text="Kontaktperson ID" />-->
 						<!--<Input value="{Partner}" />-->
