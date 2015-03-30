@@ -1,0 +1,46 @@
+createODataStatement: function(evt) {
+// 		var oEntry = {};
+// 		oEntry.Company = "Added Company";
+// 		oEntry.CreatedBy = " Yuto Murase";
+// 		oEntry.Address = "Home";
+// 		oEntry.Opportunities = "4.2 Mio Euro";
+// 		oEntry.revenuToDate = "2.1 Mio Euro ";
+// 		oEntry.Rating = "Silver";
+// 		oEntry.LastContact = "May 5, 2013";
+// 		oEntry.NextContact = "October 12, 2013";
+
+// 		oModelCompanies.create('/WorkItems', oEntry, null, function() {
+// 			alert("Create successful");
+// 		}, function() {
+// 			alert("Create failed");
+// 		});
+		
+		
+		// -----
+		
+		var oEntry = {};
+		oEntry.Partner = "3000";
+		oEntry.PartnerCp = "3333";
+		oEntry.Firstname = "Yuto";
+		oEntry.Lastname = "Moro";
+		oEntry.ContactDate = "20150101";
+		
+		this.getView().getModel().create('/ContactPersonSet', oEntry, null, function() {
+// 			alert("Create ContactPerson successful");
+		}, function() {
+			alert("Create ContactPerson failed");
+		});
+		
+
+		//				    	{
+		//                            "Company": "Farnborough Aircraft Interiors Ltd ",
+		//                            "CreatedBy": " Yuto Murase",
+		//                            "Address": " 42 1 Motohakone Hakonemaci Ashigarashimo Gun Kanagawa 250 05 JAPAN ",
+		//                            "Opportunities": "5.1 Mio Euro",
+		//                            "revenuToDate": "2.1 Mio Euro ",
+		//                            "Rating": "Silver",
+		//                            "LastContact": "May 5, 2013",
+		//                            "NextContact": "October 12, 2013"
+		//                        },
+	},
+	

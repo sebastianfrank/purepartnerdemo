@@ -1,0 +1,96 @@
+	
+<!--	<Page -->
+<!--		id="detailsPage"-->
+<!--		title="{i18n>DETAIL_TITLE}"-->
+<!--		class="sapUiFioriObjectPage"  -->
+<!--		showNavButton="{device>/isPhone}" -->
+<!--		navButtonPress="handleNavButtonPress">-->
+		
+		    <!--<EntityType Name="ContactPerson" sap:content-version="1">-->
+      <!--          <Key>-->
+      <!--              <PropertyRef Name="Partner"/>-->
+      <!--              <PropertyRef Name="PartnerCp"/>-->
+      <!--          </Key>-->
+      <!--          <Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>-->
+      <!--          <Property Name="PartnerCp" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>-->
+      <!--          <Property Name="Firstname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Vorname" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Lastname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Nachname" sap:sortable="false"/>-->
+      <!--          <Property Name="City" Type="Edm.String" MaxLength="40" sap:label="Ort" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Langu" Type="Edm.String" MaxLength="2" sap:label="Sprache (ISO)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Telephone" Type="Edm.String" MaxLength="30" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Mobile" Type="Edm.String" MaxLength="30" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Email" Type="Edm.String" MaxLength="241" sap:label="E-Mail-Adresse" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Facebook" Type="Edm.String" MaxLength="132" sap:label="URI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="ContactDate" Type="Edm.DateTime" Precision="7" sap:label="Datum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Category" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Channel" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <Property Name="Description" Type="Edm.String" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>-->
+      <!--          <NavigationProperty Name="BusinessPartner" Relationship="ZUI5_PURE_BUSINESS_PARTNER_SRV.zui5_bp_to_cp_association" FromRole="ToRole_zui5_bp_to_cp_association" ToRole="FromRole_zui5_bp_to_cp_association"/>-->
+      <!--      </EntityType>-->
+	
+<!--		<ObjectHeader id="header"-->
+<!--			 title="{Firstname} {Lastname}"-->
+<!--			 number="{PartnerCp}">-->
+			
+<!--		</ObjectHeader>-->
+		
+<!--		<IconTabBar -->
+<!--			id="iconTabBar"-->
+<!--			expanded="{device>/isNoPhone}" >-->
+
+<!--			<items id="detailsItems">-->
+<!--				<IconTabFilter id="iconTabFilter1"-->
+<!--					icon="sap-icon://personnel-view">-->
+					
+<!--					<Toolbar id="bar1_contact">-->
+<!--			            <Text text="Kontaktperson" class="sapMH3FontSize"/>-->
+<!--			            <ToolbarSpacer/>-->
+<!--				        <Button-->
+<!--                            icon="sap-icon://add-contact"-->
+<!--                            press="handleCreateCP" />-->
+<!--			        </Toolbar>-->
+					
+<!--					<form:SimpleForm-->
+<!--						id="adr_form1"-->
+<!--						layout="ResponsiveGridLayout"-->
+<!--						minWidth="512"-->
+<!--						maxContainerCols="2"-->
+<!--                        labelSpanL="2"-->
+<!--                        labelSpanM="2"-->
+<!--                        labelSpanS="2"-->
+<!--                        emptySpanL="1"-->
+<!--                        emptySpanM="1"-->
+<!--                        emptySpanS="1"-->
+<!--                        columnsL="2"-->
+<!--                        columnsM="2"-->
+<!--                        columnsS="1"-->
+<!--                        class="editableForm"-->
+<!--                        editable="true">-->
+                        
+<!--						<core:Title id="title1" text="Kontaktperson" />-->
+						
+<!--						<Label id="adr_text0_label" text="Partner" />-->
+<!--						<Text id="adr_text0" text="{Partner}" />-->
+						
+<!--						<Label id="adr_text1_label" text="PartnerCp" />-->
+<!--						<Text id="adr_text1" text="{PartnerCp}" />-->
+						
+<!--						<core:ExtensionPoint name="extIconTabFilterForm1"/>-->
+						
+<!--					</form:SimpleForm>-->
+<!--				</IconTabFilter>-->
+				
+<!--			</items>-->
+<!--		</IconTabBar>-->
+		
+<!--		<core:ExtensionPoint name="extDetail"/>-->
+		
+<!--		<footer id="detailsFooter">-->
+<!--			<Bar id="bar">-->
+<!--				<contentRight id="detailsContentRight">-->
+<!--					<Button id="actionButton" icon="sap-icon://action" press="openActionSheet"></Button>-->
+<!--				</contentRight>-->
+<!--			</Bar>-->
+<!--		</footer>-->
+<!--	</Page>-->
+<!--</mvc:View>-->

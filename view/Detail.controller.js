@@ -1,11 +1,13 @@
 sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
- 
+
 	onInit: function() {
 		this.initData();
- 
+
 		var view = this.getView();
+		// 		debugger;
 
 		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
+			//  debugger;
 			// when detail navigation occurs, update the binding context
 			if (oEvent.getParameter("name") === "Detail") {
 				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
@@ -14,13 +16,13 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 			}
 		}, this);
 
-// 		this.handleStackedColumnChart();
+		// 		this.handleStackedColumnChart();
 
-// 		this.handleOverviewTile();
+		// 		this.handleOverviewTile();
 
-//      sap.ui.localResources("");
+		//      sap.ui.localResources("");
 
- 	  //  this.initStackedColumn();
+		//  this.initStackedColumn();
 
 	},
 
@@ -66,14 +68,14 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 
 	initData: function() {
 
-// 		oDataCompanies = {
-// 			WorkItems: -> file Companies.json
-// 		};
-// 		oModelCompanies = new sap.ui.model.json.JSONModel(oDataCompanies);
+		// 		oDataCompanies = {
+		// 			WorkItems: -> file Companies.json
+		// 		};
+		// 		oModelCompanies = new sap.ui.model.json.JSONModel(oDataCompanies);
 
-// 		oModelCountryStatistics = new sap.ui.model.json.JSONModel({
-// 			businessData: -> file CountryStatistics
-// 		});
+		// 		oModelCountryStatistics = new sap.ui.model.json.JSONModel({
+		// 			businessData: -> file CountryStatistics
+		// 		});
 	},
 
 	onTileTap: function(evt) {
@@ -98,7 +100,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		sap.m.MessageToast.show("The facet overview is pressed.");
 	},
 
-/*	initStackedColumn: function(oEvent) {
+	/*	initStackedColumn: function(oEvent) {
 
 		var oVizFrame = this.getView().byId("idVizFrameStackedColumn");
 		var oPopOver = this.getView().byId("idPopOver");
@@ -192,6 +194,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		var oListItem = oEvent.getSource(); //oEvent.getParameter("listItem") || oEvent.getSource();
 
 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
+// 		debugger;
 		sap.ui.core.UIComponent.getRouterFor(this).navTo("ContactPerson_CRUD", {
 			from: "Details",
 			contextPath: oListItem.getBindingContext().getPath().substr(1)
