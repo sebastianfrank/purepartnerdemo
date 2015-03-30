@@ -58,6 +58,7 @@ sap.ui.core.mvc.Controller.extend("ui5_pure_businesspartner_app.view.Detail", {
 		var history = sap.ui.core.routing.History.getInstance();
 		var url = sap.ui.core.UIComponent.getRouterFor(this).getURL("master", {});
 		var direction = history.getDirection(url);
+		debugger;
 		if ("Backwards" === direction) {
 			window.history.go(-1);
 		} else {

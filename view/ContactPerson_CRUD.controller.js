@@ -9,13 +9,13 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	 * @memberOf view.ContactPerson_CRUD
 	 */
 	onInit: function() {
-// 		debugger;
+		// 		debugger;
 		var view = this.getView();
 		view.setModel(new sap.ui.model.json.JSONModel(), "newContact");
 
 		sap.ui.core.UIComponent.getRouterFor(this).attachRouteMatched(function(oEvent) {
 			// when detail navigation occurs, update the binding context
-// 			debugger;
+			// 			debugger;
 			if (oEvent.getParameter("name") === "ContactPerson_CRUD") {
 				var context = new sap.ui.model.Context(view.getModel(), '/' + oEvent.getParameter("arguments").contextPath);
 				view.setBindingContext(context);
@@ -52,7 +52,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	 * @memberOf view.ContactPerson_CRUD
 	 */
 	onAfterRendering: function() {
-// 		var test = true;
+		// 		var test = true;
 	},
 
 	/**
@@ -60,7 +60,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	 * @memberOf view.ContactPerson_CRUD
 	 */
 	onExit: function() {
-// 		var test = true;
+		// 		var test = true;
 	},
 
 	dateFromString: function(sDate) {
@@ -71,13 +71,13 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	},
 
 	initializeNewContactData: function() {
-// 		debugger;
+		// 		debugger;
 
 		var view = this.getView();
 
 		var bindingContext = view.getBindingContext();
-// 		var path = bindingContext.getPath();
-// 		var object = bindingContext.getModel().getProperty(path);
+		// 		var path = bindingContext.getPath();
+		// 		var object = bindingContext.getModel().getProperty(path);
 		var currentPartner = bindingContext.getProperty("Partner");
 
 		// var modelBP = this.getView().getModel();
@@ -115,7 +115,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 	// </EntityType>
 
 	savePartner: function() {
-// 		debugger;
+		// 		debugger;
 		var mnewContact = this.getView().getModel("newContact").getData().ContactPerson;
 		// 		var currentBP = this.getView().getModel("BusinessPartner").getData().Partner;
 		// 		<Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="GeschPartner" sap:updatable="false"/>
@@ -255,6 +255,7 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 				Lastname: "",
 				Telephone: "",
 				Email: "",
+				Langu: "",
 				ContactDate: ""
 			}
 		});
@@ -266,6 +267,26 @@ sap.ui.controller("ui5_pure_businesspartner_app.view.ContactPerson_CRUD", {
 		// 		// trigger routing to BindingPath of this ListItem - this will update the data on the detail page
 		// // 		sap.ui.core.UIComponent.getRouterFor(this).navTo("Details",{from: "ContactPerson_CRUD", contextPath: oListItem.getBindingContext().getPath().substr(1)});
 		//         sap.ui.core.UIComponent.getRouterFor(this).backWithoutHash(this.getView());
+	},
+
+	handleNavButtonPress: function(oEvent) {
+	    this.navigateBack();
+
+/*	    var view = this.getView();
+		var bindingContext = view.getBindingContext();
+		var path = bindingContext.getPath();
+	    
+		var history = sap.ui.core.routing.History.getInstance();
+		var url = sap.ui.core.UIComponent.getRouterFor(this).getURL("Detail", path);
+		var direction = history.getDirection(url);
+
+		if ("Backwards" === direction) {
+			window.history.go(-1);
+		} else {
+			var replace = true; // otherwise we go backwards with a forward history
+// 			this.navTo(route, data, replace);
+		}
+*/
 	}
 
 });

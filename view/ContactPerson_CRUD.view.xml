@@ -22,7 +22,10 @@
 	  
 	<Page 
 		class="sapUiFioriObjectPage"
-		title="Ansprechpartner hinzufügen">
+		title="Ansprechpartner hinzufügen"
+		id="addContactPersonPage"
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress">
 		<l:Grid
 			defaultSpan="L12 M12 S12"
 			width="auto">
